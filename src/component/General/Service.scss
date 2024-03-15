@@ -1,1 +1,251 @@
-.service-container {}
+.service-container {
+    .service-main {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+
+
+        .breadcrumb {
+
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            font-weight: 200;
+            padding: 10px 65px;
+
+            .breadcrumb-item {
+
+                color: black;
+                text-decoration: none !important;
+
+                &.active {
+                    color: rgb(0, 26, 255);
+
+                }
+            }
+        }
+
+        .about-service {
+            display: flex;
+            padding: 30px 130px 100px 130px;
+            gap: 130px;
+            align-items: center;
+
+            .title {
+                font-size: 34px;
+                font-family: monospace;
+                color: rgba($color: #000000, $alpha: 0.7);
+            }
+
+            .content {
+                display: flex;
+                gap: 50px;
+
+                .content-child {
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: rgba($color: #000000, $alpha: 0.5);
+                }
+            }
+        }
+
+        .form-transport {
+            background: #183650;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 110px 130px;
+            gap: 70px;
+
+            .transport {
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                color: #fff;
+
+                img {
+                    width: 120px;
+                    height: 80px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-family: sans-serif;
+                    font-weight: 500;
+                    padding: 30px 0;
+                }
+
+                .content {
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: rgba($color: #ffffff, $alpha: 0.8);
+                }
+
+            }
+        }
+
+        .contact-service {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 348px;
+            // width: 85vw;
+            padding: 60px 130px;
+            background-color: #34ccff;
+            color: #fff;
+
+            .content {
+                font-size: 30px;
+            }
+
+            .btn-contact {
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 15px 40px;
+                    gap: 5px;
+                    border-radius: 20px;
+                    border: 1px solid #fff;
+
+                    cursor: pointer;
+                    color: #fff;
+                    background-color: rgba($color: #34ccff, $alpha: 0);
+
+                    svg {
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        background: rgb(0, 191, 191);
+                    }
+                }
+
+            }
+        }
+
+        .effective {
+            display: flex;
+            justify-content: center;
+            padding: 80px 130px;
+            gap: 50px;
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                padding: 50px 0;
+                gap: 30px;
+
+                .title {
+                    font-size: 30px;
+                    font-weight: 300;
+                    font-family: unset;
+                }
+
+                .content {
+                    font-size: 15px;
+                    line-height: 1.5;
+                    color: rgba($color: #000000, $alpha: 0.5);
+                }
+            }
+
+        }
+
+        .term-service {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+            .safe-secure {
+                display: flex;
+                width: calc(100vw / 3);
+                gap: 30px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 80px 0;
+                background-color: #34ccff;
+
+                svg {
+                    width: 73px;
+                    height: 67px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                .content {
+                    padding: 0 120px;
+                    text-align: center;
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+            }
+
+            .delivery {
+                display: flex;
+                width: calc(100vw / 3);
+                gap: 30px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 80px 0;
+                background-color: rgb(28, 173, 222);
+
+                svg {
+                    width: 73px;
+                    height: 67px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                .content {
+                    padding: 0 120px;
+                    text-align: center;
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+
+            }
+
+            .support {
+                display: flex;
+                width: calc(100vw / 3);
+                gap: 30px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 80px 0;
+                background-color: rgb(25, 157, 201);
+
+                svg {
+                    width: 73px;
+                    height: 67px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                .content {
+                    padding: 0 120px;
+                    text-align: center;
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}

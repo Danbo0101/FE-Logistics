@@ -13,9 +13,15 @@ import imgBrand5 from "../../assets/brand5.png";
 import imgBrand6 from "../../assets/brand6.png";
 import videoHomePage from "../../assets/Logistics.mp4";
 import Footer from "../Footer/Footer";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const HomePage = (props) => {
+
+    const navigate = useNavigate();
+
+    // const location = useLocation();
+    // console.log(location);
 
     return (
         <div className="homepage-container">
@@ -28,7 +34,13 @@ const HomePage = (props) => {
                         Gateway Logistics Co., Ltd (Vietnam) is set up under Gateway Thailand on April 2006, Gateway Vietnam is an international full service freight transportation and logistics service company headquartered in Ho Chi Minh City. We provide our customers in Vietnam and around the World with intercontinental ocean and air freight transportation and logistics solutions for all general and specialized needs. Our experienced professional and dedicated staff work very hard to ensure the highest level of support, assistance and service available, and we take a great deal of pride in our work. Our mission at Gateway Vietnam is to set the global standard for excellence through total commitment to quality and customer service, and to be recognized as the industry leader in all of the markets we serve.
                     </div>
                     <div className="btn-about-us">
-                        <button>
+                        <button
+
+                            onClick={() => {
+                                navigate("about-us")
+                            }}
+
+                        >
                             <IoIosSend />
                             Read More
                         </button>
@@ -60,7 +72,10 @@ const HomePage = (props) => {
                     <div className="service-child-content">
                         Gateway Viet Logistics đã ký hợp đồng dịch vụ với nhiều hãng tàu có uy tín như APL, CMA-CGM, OOCL, ZIM, CK LINE, PIL, WAN HAI, YML, MSC, để cung cấp cho khách…
                     </div>
-                    <div className="read-more">
+                    <div
+                        className="read-more"
+                        onClick={() => navigate("service")}
+                    >
                         read more {String.fromCharCode(8594)}
                     </div>
                 </div>
@@ -71,7 +86,10 @@ const HomePage = (props) => {
                     </div>
                     <div className="service-child-content">
                         Từ các lô hàng tải nhỏ hơn container (LCL) đến các giải pháp hợp nhất đa quốc gia, GATEWAY luôn sẵn sàng đáp ứng mọi nhu cầu vận chuyển của bạn.                    </div>
-                    <div className="read-more">
+                    <div
+                        className="read-more"
+                        onClick={() => navigate("service")}
+                    >
                         read more {String.fromCharCode(8594)}
                     </div>
                 </div>
@@ -86,7 +104,10 @@ const HomePage = (props) => {
 
                         Hiện tại, Gateway Logistics đang phát triển mạnh trong hệ thống vận tải hàng không.
                     </div>
-                    <div className="read-more">
+                    <div
+                        className="read-more"
+                        onClick={() => navigate("service")}
+                    >
                         read more {String.fromCharCode(8594)}
                     </div>
                 </div>
@@ -100,7 +121,9 @@ const HomePage = (props) => {
                         We will take care of your cargo or your pasenger and deliver them safe and on time!
                     </div>
                     <div className="btn-contact">
-                        <button>
+                        <button
+                            onClick={() => navigate("contact")}
+                        >
                             Contact Now
                             <FaArrowRight />
                         </button>

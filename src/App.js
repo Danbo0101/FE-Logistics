@@ -1,8 +1,8 @@
 import './App.scss';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import Header from './component/Header/Header';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import HomePage from './component/HomePage/HomePage';
 
@@ -10,15 +10,41 @@ import HomePage from './component/HomePage/HomePage';
 const App = () => {
 
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [isHomePage, setIsHomePage] = useState(false);
+  // console.log(location.pathname);
+  const [isHomePage, setIsHomePage] = useState(true);
+  const [title, setTitle] = useState("")
 
 
+  useEffect(() => {
+    handleHomePage()
+  }, [location])
 
   const handleHomePage = () => {
-    // console.log("1");
-    setIsHomePage(true);
-    navigate("/");
+    if (location.pathname === "/") {
+      setIsHomePage(true);
+    }
+    if (location.pathname === "/about-us") {
+      setTitle("ABOUT US – VỀ CHÚNG TÔI");
+      setIsHomePage(false);
+    }
+    if (location.pathname === "/service") {
+      setTitle("GATEWAY SERVICE – DỊCH VỤ VẬN CHUYỂN GATEWAY");
+      setIsHomePage(false);
+    }
+    if (location.pathname === "/gallery") {
+      setTitle("GALLERY");
+      setIsHomePage(false);
+    }
+    if (location.pathname === "/new") {
+      setTitle("NEWS - TIN TỨC");
+      setIsHomePage(false);
+    }
+    if (location.pathname === "/contact") {
+      setTitle("CONTACT - LIÊN HỆ VỚI CHÚNG TÔI");
+      setIsHomePage(false);
+    }
   }
 
   return (
@@ -26,13 +52,12 @@ const App = () => {
       <div className='header-contanier'>
         <Header
           isHomePage={isHomePage}
+          title={title}
         />
       </div>
       <div className='main-container'>
         <PerfectScrollbar>
-          <HomePage
-            handleHomePage={handleHomePage}
-          />
+          <Outlet />
         </PerfectScrollbar>
       </div>
 

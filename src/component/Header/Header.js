@@ -15,6 +15,9 @@ const Header = (props) => {
 
     const navigate = useNavigate();
 
+    const { isHomePage, title } = props;
+
+    // console.log(title);
 
     const [currentImage, setCurrentImage] = useState(0);
     const [imageOpacity, setImageOpacity] = useState(0);
@@ -26,10 +29,6 @@ const Header = (props) => {
         imgHomePage2,
         imgHomePage3
     ]
-
-
-
-
 
     useEffect(() => {
         setImageOpacity(0);
@@ -66,10 +65,6 @@ const Header = (props) => {
 
     }
 
-
-
-
-
     return (
         <div className="header-container">
             <div className="top-bar">
@@ -86,67 +81,93 @@ const Header = (props) => {
                     40 Nguyen Van Giai Street, Da Kao Ward, District 1, HCMC, Vietnam
                 </div>
             </div>
-            <div className="overview">
-                <img
-                    src={images[currentImage]}
-                    style={{ opacity: imageOpacity, transition: 'opacity 1s' }}
-                />
-                <div className="header-home-container">
-                    <div
-                        className="logo"
 
-                    >
-                        <img src={logo} />
+            {isHomePage ?
+                <div className="overview">
+                    <img
+                        src={images[currentImage]}
+                        style={{ opacity: imageOpacity, transition: 'opacity 1s' }}
+                    />
+                    <div className="header-home-container">
+                        <div
+                            className="logo"
+                            onClick={() => navigate("/")}
+                        >
+                            <img src={logo} />
+                        </div>
+                        <div className="btn">
+                            <span onClick={() => navigate("/")}>Home</span>
+                            <span onClick={() => navigate("/about-us")}>About Us</span>
+                            <span onClick={() => navigate("/service")}>Service</span>
+                            <span onClick={() => navigate("/gallery")}>Gallery</span>
+                            <span onClick={() => navigate("/new")}>News</span>
+                            <span onClick={() => navigate("/contact")}>Contact</span>
+                        </div>
                     </div>
-                    <div className="btn">
+                    <div className="title">
+                        <hr className="custom-hr" />
+                        <div className="title-main">
+                            TRANSATLANTIC DELIVERY
+                        </div>
+                        <div className="title-sub">
+                            Assuring the compliant handling of temperature sensitive healthcare products in today's complex supply chain is one of the foremost challenges facing
+                        </div>
+
+                    </div>
+                    <div className="slide-nav">
+
                         <span
-
-                        >Home</span>
-                        <span onClick={() => navigate("/about-us")}>About Us</span>
-                        <span onClick={() => navigate("/service")}>Service</span>
-                        <span onClick={() => navigate("/gallery")}>Gallery</span>
-                        <span onClick={() => navigate("/new")}>News</span>
-                        <span onClick={() => navigate("/contact")}>Contact</span>
+                            className="name"
+                            onClick={() => handleClickBtnHomePage("ROAD")}
+                        >
+                            Road Freight
+                        </span>
+                        <span
+                            className="name"
+                            onClick={() => handleClickBtnHomePage("AIR")}
+                        >
+                            Air Freight
+                        </span>
+                        <span
+                            className="name"
+                            onClick={() => handleClickBtnHomePage("SEA")}
+                        >
+                            Sea Freight
+                        </span>
+                        <span
+                            className="name"
+                            onClick={() => handleClickBtnHomePage("WAREHOUSE")}
+                        >
+                            WareHousing
+                        </span>
                     </div>
                 </div>
-                <div className="title">
-                    <hr className="custom-hr" />
-                    <div className="title-main">
-                        TRANSATLANTIC DELIVERY
+                :
+                <div className="header-sub-container">
+                    <div className="nav-bar-sub">
+                        <div
+                            className="logo"
+                            onClick={() => navigate("/")}
+                        >
+                            <img src={logo} />
+                        </div>
+                        <div className="btn">
+                            <span onClick={() => navigate("/")}>Home</span>
+                            <span onClick={() => navigate("/about-us")}>About Us</span>
+                            <span onClick={() => navigate("/service")}>Service</span>
+                            <span onClick={() => navigate("/gallery")}>Gallery</span>
+                            <span onClick={() => navigate("/new")}>News</span>
+                            <span onClick={() => navigate("/contact")}>Contact</span>
+                        </div>
                     </div>
-                    <div className="title-sub">
-                        Assuring the compliant handling of temperature sensitive healthcare products in today's complex supply chain is one of the foremost challenges facing
+                    <div className="sub-title">
+                        {title}
                     </div>
 
-                </div>
-                <div className="slide-nav">
 
-                    <span
-                        className="name"
-                        onClick={() => handleClickBtnHomePage("ROAD")}
-                    >
-                        Road Freight
-                    </span>
-                    <span
-                        className="name"
-                        onClick={() => handleClickBtnHomePage("AIR")}
-                    >
-                        Air Freight
-                    </span>
-                    <span
-                        className="name"
-                        onClick={() => handleClickBtnHomePage("SEA")}
-                    >
-                        Sea Freight
-                    </span>
-                    <span
-                        className="name"
-                        onClick={() => handleClickBtnHomePage("WAREHOUSE")}
-                    >
-                        WareHousing
-                    </span>
                 </div>
-            </div>
+            }
+
 
 
 

@@ -29,12 +29,13 @@ const Layout = () => {
             <Routes>
                 <Route path='/' element={<App />}>
                     <Route index element={<HomePage />} />
+                    <Route path='about-us' element={<AboutUs />} />
+                    <Route path='service' element={<Service />} />
+                    <Route path='gallery' element={<Gallery />} />
+                    <Route path='new' element={<New />} />
+                    <Route path='contact' element={<Contact />} />
                 </Route>
-                <Route path='/about-us' element={<AboutUs />} />
-                <Route path='/service' element={<Service />} />
-                <Route path='/gallery' element={<Gallery />} />
-                <Route path='/new' element={<New />} />
-                <Route path='/contact' element={<Contact />} />
+
             </Routes>
 
         </Suspense>

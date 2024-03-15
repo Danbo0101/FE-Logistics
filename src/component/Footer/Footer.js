@@ -3,12 +3,15 @@ import logo from "../../assets/logo.png";
 import { IoIosArrowForward, IoMdPhonePortrait } from "react-icons/io";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { FaFax, FaFacebook, FaInstagram, FaGooglePlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 
 const Footer = () => {
+
+    const navigate = useNavigate();
 
 
     return (
@@ -25,27 +28,45 @@ const Footer = () => {
                         MENU
                     </div>
                     <div className="content">
-                        <div className="child">
+                        <div
+                            className="child"
+                            onClick={() => navigate("/")}
+                        >
                             <IoIosArrowForward />
                             Home
                         </div>
-                        <div className="child">
+                        <div
+                            className="child"
+                            onClick={() => navigate("about-us")}
+                        >
                             <IoIosArrowForward />
                             AboutUs
                         </div>
-                        <div className="child">
+                        <div
+                            className="child"
+                            onClick={() => navigate("service")}
+                        >
                             <IoIosArrowForward />
                             Service
                         </div>
-                        <div className="child">
+                        <div
+                            className="child"
+                            onClick={() => navigate("gallery")}
+                        >
                             <IoIosArrowForward />
                             Gallery
                         </div>
-                        <div className="child">
+                        <div
+                            className="child"
+                            onClick={() => navigate("new")}
+                        >
                             <IoIosArrowForward />
                             News
                         </div>
-                        <div className="child">
+                        <div
+                            className="child"
+                            onClick={() => navigate("contact")}
+                        >
                             <IoIosArrowForward />
                             Contact
                         </div>
