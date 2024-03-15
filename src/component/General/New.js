@@ -1,6 +1,7 @@
 import "./New.scss";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { NavLink, useNavigate } from "react-router-dom";
+import { FaSearch } from 'react-icons/fa';
 import { IoIosArrowForward } from "react-icons/io";
 import imgNew1 from "../../assets/new1.png";
 import { useState } from "react";
@@ -100,13 +101,123 @@ const New = (props) => {
                         </div>
 
                     </div>
-                </div>
-                <div className="right-container">
-                    <div className="filter">
-                        <input />
+
+                    <div className="new-content">
+                        {isImgNew ?
+                            <div className="new-image-content">
+                                <img src={imgNew1} alt="img-new-1" />
+                                <div className="date-new">
+                                    <div className="day">
+                                        24
+                                    </div>
+                                    <div className="month">
+                                        Apr
+                                    </div>
+                                </div>
+                            </div>
+                            :
+                            <>
+                            </>
+
+                        }
+                        <div className="main-content">
+                            <div className="title">
+                                𝗣𝗵𝗮̂𝗻 𝗯𝗶𝗲̣̂𝘁 𝗵𝗮̀𝗻𝗴 𝗰𝗵𝘂𝘆𝗲̂̉𝗻 𝘁𝗮̉𝗶 (𝗩𝗜𝗔) 𝘃𝗮̀ 𝗵𝗮̀𝗻𝗴 𝘁𝗿𝘂̛̣𝗰 𝘁𝗶𝗲̂́𝗽 (𝗗𝗶𝗿𝗲𝗰𝘁)
+                            </div>
+                            <div className="category">
+                                Category :
+                                <div className="name">
+                                    Ocean Freight
+                                </div>
+                            </div>
+                            <div className="content">
+                                Thuật ngữ gửi hàng chuyển tải (via) và gửi hàng trực tiếp (direct) có vẻ khá quen thuộc với người trong nghề nhưng còn xa lạ với quý khách hàng có nhu cầu…
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div className="category">
+                    <div className="new-content">
+                        {isImgNew ?
+                            <div className="new-image-content">
+                                <img src={imgNew1} alt="img-new-1" />
+                                <div className="date-new">
+                                    <div className="day">
+                                        24
+                                    </div>
+                                    <div className="month">
+                                        Apr
+                                    </div>
+                                </div>
+                            </div>
+                            :
+                            <>
+                            </>
+
+                        }
+                        <div className="main-content">
+                            <div className="title">
+                                𝗣𝗵𝗮̂𝗻 𝗯𝗶𝗲̣̂𝘁 𝗵𝗮̀𝗻𝗴 𝗰𝗵𝘂𝘆𝗲̂̉𝗻 𝘁𝗮̉𝗶 (𝗩𝗜𝗔) 𝘃𝗮̀ 𝗵𝗮̀𝗻𝗴 𝘁𝗿𝘂̛̣𝗰 𝘁𝗶𝗲̂́𝗽 (𝗗𝗶𝗿𝗲𝗰𝘁)
+                            </div>
+                            <div className="category">
+                                Category :
+                                <div className="name">
+                                    Ocean Freight
+                                </div>
+                            </div>
+                            <div className="content">
+                                Thuật ngữ gửi hàng chuyển tải (via) và gửi hàng trực tiếp (direct) có vẻ khá quen thuộc với người trong nghề nhưng còn xa lạ với quý khách hàng có nhu cầu…
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="new-content">
+                        {isImgNew ?
+                            <div className="new-image-content">
+                                <img src={imgNew1} alt="img-new-1" />
+                                <div className="date-new">
+                                    <div className="day">
+                                        24
+                                    </div>
+                                    <div className="month">
+                                        Apr
+                                    </div>
+                                </div>
+                            </div>
+                            :
+                            <>
+                            </>
+
+                        }
+                        <div className="main-content">
+                            <div className="title">
+                                𝗣𝗵𝗮̂𝗻 𝗯𝗶𝗲̣̂𝘁 𝗵𝗮̀𝗻𝗴 𝗰𝗵𝘂𝘆𝗲̂̉𝗻 𝘁𝗮̉𝗶 (𝗩𝗜𝗔) 𝘃𝗮̀ 𝗵𝗮̀𝗻𝗴 𝘁𝗿𝘂̛̣𝗰 𝘁𝗶𝗲̂́𝗽 (𝗗𝗶𝗿𝗲𝗰𝘁)
+                            </div>
+                            <div className="category">
+                                Category :
+                                <div className="name">
+                                    Ocean Freight
+                                </div>
+                            </div>
+                            <div className="content">
+                                Thuật ngữ gửi hàng chuyển tải (via) và gửi hàng trực tiếp (direct) có vẻ khá quen thuộc với người trong nghề nhưng còn xa lạ với quý khách hàng có nhu cầu…
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="right-container">
+                    <div className="filter-container">
+                        <div className="search-container">
+                            <input type="text" className="search-input" placeholder="Search..." />
+                            <FaSearch className="search-icon" />
+                        </div>
+                    </div>
+                    <div className="category-container">
+                        <div className="category-title">
+                            CATEGORIES
+                        </div>
                         <div className="category-child">
                             <IoIosArrowForward />
                             AIR FREIGHT
@@ -140,14 +251,6 @@ const New = (props) => {
                             UNCATEGORIZED
                         </div>
                     </div>
-
-                    <div className="our-gallery">
-                        <div className="title">
-                            OUR GALLERY
-                        </div>
-                        <div className="main-gallery">
-                        </div>
-                    </div>
                     <div className="recent-post">
                         <div className="title">
                             RECENT POSTS
@@ -158,9 +261,13 @@ const New = (props) => {
                             </div>
                             <div className="content">
                                 𝗣𝗵𝗮̂𝗻 𝗯𝗶𝗲̣̂𝘁 𝗵𝗮̀𝗻𝗴 𝗰𝗵𝘂𝘆𝗲̂̉𝗻 𝘁𝗮̉𝗶 (𝗩𝗜𝗔) 𝘃𝗮̀ 𝗵𝗮̀𝗻𝗴 𝘁𝗿𝘂̛̣𝗰 𝘁𝗶𝗲̂́𝗽 (𝗗𝗶𝗿𝗲𝗰𝘁)
+                                <br />
+                                <br />
+                                <hr />
                             </div>
+
                         </div>
-                        <hr />
+
                         <div className="main-recent-post">
                             <div className="date">
                                 April 30, 2020
