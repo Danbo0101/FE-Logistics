@@ -37,35 +37,35 @@ const Footer = () => {
                         </div>
                         <div
                             className="child"
-                            onClick={() => navigate("about-us")}
+                            onClick={() => navigate("/about-us")}
                         >
                             <IoIosArrowForward />
                             AboutUs
                         </div>
                         <div
                             className="child"
-                            onClick={() => navigate("service")}
+                            onClick={() => navigate("/service")}
                         >
                             <IoIosArrowForward />
                             Service
                         </div>
                         <div
                             className="child"
-                            onClick={() => navigate("gallery")}
+                            onClick={() => navigate("/gallery")}
                         >
                             <IoIosArrowForward />
                             Gallery
                         </div>
                         <div
                             className="child"
-                            onClick={() => navigate("new")}
+                            onClick={() => navigate("/new")}
                         >
                             <IoIosArrowForward />
                             News
                         </div>
                         <div
                             className="child"
-                            onClick={() => navigate("contact")}
+                            onClick={() => navigate("/contact")}
                         >
                             <IoIosArrowForward />
                             Contact

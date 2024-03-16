@@ -21,6 +21,7 @@ import imgGallery11 from "../../assets/gallery11.jpg";
 import imgGallery12 from "../../assets/gallery12.jpg";
 
 
+
 const Gallery = (props) => {
     useEffect(() => {
 

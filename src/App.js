@@ -12,6 +12,7 @@ const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+
   // console.log(location.pathname);
   const [isHomePage, setIsHomePage] = useState(true);
   const [title, setTitle] = useState("")

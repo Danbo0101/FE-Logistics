@@ -23,6 +23,13 @@ const HomePage = (props) => {
     // const location = useLocation();
     // console.log(location);
 
+    const navigateWithScroll = (path) => {
+        navigate(path);
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
     return (
         <div className="homepage-container">
             <div className="about-us">
@@ -37,7 +44,7 @@ const HomePage = (props) => {
                         <button
 
                             onClick={() => {
-                                navigate("about-us")
+                                navigateWithScroll("about-us")
                             }}
 
                         >
@@ -74,7 +81,9 @@ const HomePage = (props) => {
                     </div>
                     <div
                         className="read-more"
-                        onClick={() => navigate("service")}
+                        onClick={() => {
+                            navigateWithScroll("service")
+                        }}
                     >
                         read more {String.fromCharCode(8594)}
                     </div>
