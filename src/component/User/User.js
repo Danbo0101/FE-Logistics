@@ -121,13 +121,18 @@ const User = () => {
                                     <td>27.254.550₫	</td>
                                     <td>31-03-2024</td>
                                     <td>
-                                        <button className="booking">
-                                            Lấy booking
-                                        </button>
-                                        <button className="contact">
-                                            <CiMail />
-                                            Liên hệ
-                                        </button>
+                                        <div className="button-container">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingFCL()}
+                                            >
+                                                Lấy booking
+                                            </button>
+                                            <button className="contact">
+                                                <CiMail />
+                                                Liên hệ
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -157,13 +162,18 @@ const User = () => {
                                     <td>7.765.680₫</td>
                                     <td>31-03-2024</td>
                                     <td>
-                                        <button className="booking">
-                                            Lấy booking
-                                        </button>
-                                        <button className="contact">
-                                            <CiMail />
-                                            Liên hệ
-                                        </button>
+                                        <div className="button-container">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingFCL()}
+                                            >
+                                                Lấy booking
+                                            </button>
+                                            <button className="contact">
+                                                <CiMail />
+                                                Liên hệ
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -193,13 +203,18 @@ const User = () => {
                                     <td>73.962.000₫</td>
                                     <td>31-03-2024</td>
                                     <td>
-                                        <button className="booking">
-                                            Lấy booking
-                                        </button>
-                                        <button className="contact">
-                                            <CiMail />
-                                            Liên hệ
-                                        </button>
+                                        <div className="button-container">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingFCL()}
+                                            >
+                                                Lấy booking
+                                            </button>
+                                            <button className="contact">
+                                                <CiMail />
+                                                Liên hệ
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -230,13 +245,18 @@ const User = () => {
                                     <td>23-03-2024
                                     </td>
                                     <td>
-                                        <button className="booking">
-                                            Lấy booking
-                                        </button>
-                                        <button className="contact">
-                                            <CiMail />
-                                            Liên hệ
-                                        </button>
+                                        <div className="button-container">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingFCL()}
+                                            >
+                                                Lấy booking
+                                            </button>
+                                            <button className="contact">
+                                                <CiMail />
+                                                Liên hệ
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>

@@ -87,28 +87,144 @@ const ModalBookingFCL = (props) => {
                                 </select>
                             </div>
                             <div className='number-container'>
-                                <div className=''>
+                                <div className='title-number'>
+                                    Số lượng container
+                                </div>
+                                <div className='number'>
+                                    <GoHorizontalRule />
+                                    1
+                                    <GoPlus />
+                                </div>
+                            </div>
+                            <div className='freight'>
+                                <div className='title'>
+                                    Cước vận chuyển
+                                </div>
+                                <div className='price'>
+                                    125.321.150₫
+                                </div>
+                            </div>
 
+                            <div className='add-fee'>
+                                <div className='title'>
+                                    Phụ phí
+                                </div>
+                                <div className='price'>
+                                    9.582.650₫
+                                </div>
+                            </div>
+
+                            <div className='total-cost'>
+                                <div className='title'>
+                                    Tổng chi phí
+                                </div>
+                                <div className='price'>
+                                    134.903.800₫
+                                </div>
+                            </div>
+                            <div className='good-weight'>
+                                <div className='title-weight'>
+                                    Trọng lượng hàng (KG)
+                                </div>
+                                <div className='number'>
+                                    <GoHorizontalRule />
+                                    1
+                                    <GoPlus />
                                 </div>
                             </div>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
+                            <label class="form-check-label">SOC (Container của chủ hàng)</label>
+                        </div>
                         <div className='charge'>
-                            charge
+                            <div className='total-charge'>
+                                <div className='title'>
+                                    Tổng cước phí
+                                </div>
+                                <div className='number'>
+                                    125.321.150₫
+                                </div>
+                            </div>
+                            <div className='total-charge'>
+                                <div className='title'>
+                                    Tổng phụ phí
+                                </div>
+                                <div className='number'>
+                                    9.582.650₫
+                                </div>
+                            </div>
+                            <div className='total-charge'>
+                                <div className='title'>
+                                    Tổng số tiền
+                                </div>
+                                <div className='number'>
+                                    134.903.800₫
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='goods'>
-                        goods
+                        <div className='good-type'>
+                            <label>Nhóm hàng</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Hàng thường</option>
+                                <option value="1">Hàng nguy hiểm</option>
+                                <option value="2">Hàng khác</option>
+                            </select>
+                        </div>
+                        <div className='good-detail'>
+                            <label>Mô tả hàng hoá</label>
+                            <input
+                                type='text'
+                            />
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
+                            <label class="form-check-label">Hàng nguy hiểm</label>
+                        </div>
                     </div>
                     <div className='notes'>
-                        notes
+                        <div className='time'>
+                            <div className='title'>
+                                Thời gian khởi hành dự kiến
+                            </div>
+                            <div className='from-time'>
+                                <label>Từ ngày</label>
+                                <input
+                                    type='date'
+                                />
+                            </div>
+                            <div className='to-time'>
+                                <label>Tới ngày</label>
+                                <input
+                                    type='date'
+                                />
+                            </div>
+                        </div>
+                        <div className='note'>
+                            <div className='name-note'>
+                                Lưu ý quan trọng
+                            </div>
+                            <textarea
+                                placeholder=""
+                                rows={3}
+                            />
+
+                        </div>
                     </div>
                 </div>
             </Modal.Body>
             <Modal.Footer>
+
+                <Button variant="primary">Gửi yêu cầu Booking</Button>
+
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="primary">Gửi yêu cầu Booking</Button>
+
+
+
             </Modal.Footer>
         </Modal>
     )
