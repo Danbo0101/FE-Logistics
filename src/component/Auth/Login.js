@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux";
-
 import './Login.scss'
 import { useState } from 'react';
 // import { toast } from 'react-toastify';
 import { ImSpinner6 } from "react-icons/im";
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { useTranslation, Trans } from 'react-i18next';
+import HeaderAuth from '../Header/HeaderAuth';
 // import { doLogin } from '../../redux/action/userAction';
 
 
@@ -75,9 +73,10 @@ const Login = (props) => {
 
     return (
         <div className="login-contanier">
-            <div className="header-container">
-
+            <div className='header-auth-container'>
+                <HeaderAuth />
             </div>
+
             <PerfectScrollbar>
                 <div className="main-container">
                     <div className='content'>
@@ -97,46 +96,46 @@ const Login = (props) => {
                         </div>
                         <div className="content-form  mx-auto">
                             <div className="form-group">
-                                <label> {t('login.email.title')}</label>
+                                <label> Email</label>
                                 <input
                                     type="email"
                                     className="form-control"
-                                    value={email}
-                                    placeholder={t('login.email.content')}
-                                    onChange={(event) => setEmail(event.target.value)}
-                                    onKeyDown={(event) => handleKeyDown(event)}
+                                    // value={email}
+                                    placeholder="Email ...."
+                                // onChange={(event) => setEmail(event.target.value)}
+                                // onKeyDown={(event) => handleKeyDown(event)}
                                 />
                             </div>
                             <div className="form-group">
-                                <label>{t('login.password.title')}</label>
+                                <label>Password</label>
                                 <input
                                     type="password"
                                     className="form-control"
-                                    value={password}
-                                    placeholder={t('login.password.content')}
-                                    onChange={(event) => setPassword(event.target.value)}
-                                    onKeyDown={(event) => handleKeyDown(event)}
+                                    // value={password}
+                                    placeholder="Password ..."
+                                // onChange={(event) => setPassword(event.target.value)}
+                                // onKeyDown={(event) => handleKeyDown(event)}
                                 />
                             </div>
                             <span
                                 className="forgot"
-                                onClick={() => navigate('/forgot-password')}
-                            >{t('login.forgot-password')}
+                            // onClick={() => navigate('/forgot-password')}
+                            >Forgot Password ?
                             </span>
                             <div>
                                 <button
                                     className="btn-submit"
-                                    onClick={() => handleLogin()}
-                                    disabled={isLoading}
-                                >{t('login.btn')}
-                                    {isLoading === true && <ImSpinner6 className="loader-icon" />}
+                                // onClick={() => handleLogin()}
+                                // disabled={isLoading}
+                                >Login
+                                    {/* {isLoading === true && <ImSpinner6 className="loader-icon" />} */}
                                 </button>
                             </div>
                             <div className='sign-up'>
-                                {t('login.sign-up.ask')}
+                                Sign In
                                 <span
-                                    onClick={() => navigate('/register')}
-                                >  {t('login.sign-up.btn')}
+                                // onClick={() => navigate('/register')}
+                                >  Sign In
                                 </span>
 
                             </div>

@@ -4,56 +4,93 @@
 
     .top-bar {
         display: flex;
-        padding: 10px 100px;
-        justify-content: start;
+        justify-content: space-between;
 
-        .phone-contact {
+
+        .left-top-bar {
+            display: flex;
+            padding: 10px 100px;
+            justify-content: start;
+
+            .phone-contact {
+                display: flex;
+                align-items: center;
+                padding: 5px 35px;
+                color: #fff;
+                font-size: 13px;
+                font-family: sans-serif;
+
+                svg {
+                    margin: 0 6px 0 0;
+                    font-size: 22px;
+                    color: #2fb9e7;
+                }
+
+            }
+
+            .email-contact {
+                display: flex;
+                align-items: center;
+                padding: 5px 35px;
+                color: #fff;
+                font-size: 13px;
+                font-family: sans-serif;
+
+                svg {
+                    margin: 0 6px 0 0;
+                    font-size: 22px;
+                    color: #2fb9e7;
+                }
+
+            }
+
+            .location {
+                display: flex;
+                align-items: center;
+                padding: 5px 35px;
+                color: #fff;
+                font-size: 13px;
+                font-family: sans-serif;
+
+                svg {
+                    margin: 0 6px 0 0;
+                    font-size: 22px;
+                    color: #2fb9e7;
+                }
+
+            }
+        }
+
+        .right-top-bar {
             display: flex;
             align-items: center;
-            padding: 5px 35px;
-            color: #fff;
-            font-size: 13px;
-            font-family: sans-serif;
+            justify-content: center;
+            gap: 15px;
+            padding-right: 30px;
 
-            svg {
-                margin: 0 6px 0 0;
-                font-size: 22px;
-                color: #2fb9e7;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px 25px;
+                font-size: 15px;
+                font-weight: 800;
+                border: none;
+                border-radius: 15px;
+                background-color: rgba(47, 102, 150, 0.5);
+                color: #fff;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #bababa;
+                    color: #000000;
+                }
+
             }
 
         }
 
-        .email-contact {
-            display: flex;
-            align-items: center;
-            padding: 5px 35px;
-            color: #fff;
-            font-size: 13px;
-            font-family: sans-serif;
 
-            svg {
-                margin: 0 6px 0 0;
-                font-size: 22px;
-                color: #2fb9e7;
-            }
-
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            padding: 5px 35px;
-            color: #fff;
-            font-size: 13px;
-            font-family: sans-serif;
-
-            svg {
-                margin: 0 6px 0 0;
-                font-size: 22px;
-                color: #2fb9e7;
-            }
-
-        }
     }
 
     .overview {

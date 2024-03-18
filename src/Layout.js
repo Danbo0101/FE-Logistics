@@ -9,6 +9,8 @@ import Gallery from "./component/General/Gallery";
 import New from "./component/General/New/New";
 import Contact from "./component/General/Contact";
 import NewDetail from './component/General/New/NewDetail';
+import Login from './component/Auth/Login';
+import User from './component/User/User';
 
 
 
@@ -35,6 +37,10 @@ const Layout = () => {
         <Suspense fallback="...is loading">
             {/* <ScrollToTop /> */}
             <Routes>
+
+                <Route path='/login' element={<Login />} />
+
+                <Route path='/user' element={<User />} />
                 <Route path="/" element={<App />}>
                     <Route index element={<HomePage />} />
                     <Route path="about-us" element={<AboutUs />} />

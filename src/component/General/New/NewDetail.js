@@ -126,7 +126,7 @@ const NewDetail = (props) => {
                     <div className="right-form">
                         <textarea
                             placeholder="Message"
-                            rows={9}
+                            rows={7}
                         />
                         <div className="btn-submit">
                             <button>
