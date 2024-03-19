@@ -104,8 +104,10 @@ const Header = (props) => {
                             >
                                 Login
                             </button>
-                            <button>
-                                Sign In
+                            <button
+                                onClick={() => navigate("/sign-up")}
+                            >
+                                Sign Up
                             </button>
                         </div>
                     </>

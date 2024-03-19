@@ -81,13 +81,13 @@ const Login = (props) => {
                 <div className="main-container">
                     <div className='content'>
                         <div className="title mx-auto">
-                            Ga
+                            Welcome !
                         </div>
                         <div className="welcome mx-auto">
-                            PT Booking
+                            GATEWAY
                             <div className='welcome-sub'>
                                 <hr />
-                                PTIT SCHOOL
+                                LOGISTICS
                                 <hr />
                             </div>
 
@@ -132,10 +132,10 @@ const Login = (props) => {
                                 </button>
                             </div>
                             <div className='sign-up'>
-                                Sign In
+                                Don’t have an account?
                                 <span
                                 // onClick={() => navigate('/register')}
-                                >  Sign In
+                                >  Sign Up
                                 </span>
 
                             </div>

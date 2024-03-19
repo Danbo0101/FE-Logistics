@@ -11,6 +11,7 @@ import Contact from "./component/General/Contact";
 import NewDetail from './component/General/New/NewDetail';
 import Login from './component/Auth/Login';
 import User from './component/User/User';
+import Register from './component/Auth/Register';
 
 
 
@@ -39,6 +40,7 @@ const Layout = () => {
             <Routes>
 
                 <Route path='/login' element={<Login />} />
+                <Route path='/sign-up' element={<Register />} />
 
                 <Route path='/user' element={<User />} />
                 <Route path="/" element={<App />}>
