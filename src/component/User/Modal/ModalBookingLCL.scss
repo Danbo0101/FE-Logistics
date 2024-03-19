@@ -1,0 +1,356 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    /* Đảm bảo Modal nằm trên cùng */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu nền mờ */
+    --bs-modal-width: 1100px;
+}
+
+.modal-content {
+    width: fit-content;
+    padding: 20px;
+
+    .modal-header {
+        .header-booking {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            white-space: nowrap;
+        }
+
+        .name {}
+
+        .company-logistic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .name-company {
+                color: rgb(0, 134, 218);
+                text-decoration: underline;
+                font-weight: 500;
+            }
+        }
+
+        .sale-representative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .name-merchandiser {
+                color: rgb(0, 134, 218);
+                font-weight: 500;
+            }
+        }
+    }
+
+    .modal-body {
+        .booking-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+
+            .from-to {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                gap: 38px;
+
+                .name-from,
+                .name-to {
+                    display: flex;
+                    flex-direction: column;
+
+
+
+                    input {
+                        width: 22vw;
+                        font-size: 14px;
+                        padding: 4px;
+
+                    }
+                }
+
+                .delivery-conditions {
+                    display: flex;
+                    flex-direction: column;
+
+                    select.form-select {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .container-goods {
+                border: 0.5px solid black;
+                display: flex;
+                flex-direction: column;
+                padding: 5px 15px;
+
+                .types-container {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .weight {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        input {
+                            width: 5vw;
+                            padding: 3px 0;
+                            text-align: center;
+                            background-color: rgb(182, 182, 182);
+                        }
+                    }
+
+                    .number-CBM {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .number {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 30px;
+                            border: 1px solid;
+                            padding: 4px 5px;
+                            border-radius: 5px;
+                        }
+
+
+                    }
+
+                    .freight,
+                    .add-fee-from,
+                    .add-fee-to,
+                    .total-cost {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .number-goods {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .number {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 30px;
+                            border: 1px solid;
+                            padding: 4px 5px;
+                            border-radius: 5px;
+                        }
+
+
+                    }
+                }
+
+
+            }
+
+            .quote {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                .quote-main {
+                    width: 45vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid;
+
+                    .quote-name {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 15px 0;
+                        width: 45vw;
+                        border: 1px solid;
+                        font-size: 17px;
+                        font-weight: 600;
+                        background-color: rgb(178, 178, 178);
+                    }
+
+                    .quote-content {
+                        display: flex;
+                        flex-wrap: nowrap;
+
+                        .quote-content-child {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            border: 1px solid;
+                            // padding: 10px 24px;
+
+                            .quote-content-child-name,
+                            .quote-content-child-price {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                padding: 5px 24px;
+
+                            }
+
+                            .quote-content-child-name {
+                                border-bottom: 1px solid;
+                                font-size: 17px;
+                                font-weight: 600;
+                                background-color: rgb(178, 178, 178);
+
+                            }
+                        }
+
+                    }
+                }
+
+                .quote-note {
+                    width: 25vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    height: 20vh;
+
+                    .quote-note-name {
+                        font-size: 17px;
+                        font-weight: 600;
+                        padding: 5px 0px;
+                    }
+
+                    .quote-note-content {
+                        // border: 1px solid;
+                        font-size: 14px;
+                        background-color: rgb(213, 213, 213);
+                        width: 25vw;
+                    }
+
+
+
+                }
+            }
+
+            .goods {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid;
+                padding: 5px 15px;
+                gap: 102px;
+
+                .good-type {
+                    display: flex;
+                    flex-direction: column;
+
+                    select.form-select {
+                        font-size: 14px;
+                    }
+                }
+
+                .good-detail {
+                    display: flex;
+                    flex-direction: column;
+
+
+
+                    input {
+                        width: 35vw;
+                        font-size: 14px;
+                        padding: 4px;
+
+                    }
+                }
+
+
+
+
+            }
+
+            .notes {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 26px;
+                border: 1px solid;
+                padding: 5px 26px;
+
+                .time {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    gap: 15px;
+
+
+                    .from-time,
+                    .to-time {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+
+
+                        input {
+                            width: 34vw;
+                            font-size: 14px;
+                            padding: 4px;
+
+                        }
+                    }
+                }
+
+                .note {
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    textarea {
+                        width: 27vw;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+
+    }
+}

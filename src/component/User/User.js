@@ -10,14 +10,20 @@ import { CiMail } from "react-icons/ci";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import "./User.scss"
 import ModalBookingFCL from "./Modal/ModalBookingFCL";
+import ModalBookingLCL from "./Modal/ModalBookingLCL";
 import { useState } from "react";
 
 const User = () => {
 
     const [showModalBookingFCL, setShowModalBookingFCL] = useState(false);
+    const [showModalBookingLCL, setShowModalBookingLCL] = useState(false);
 
     const handleBookingFCL = () => {
         setShowModalBookingFCL(true);
+    }
+
+    const handleBookingLCL = () => {
+        setShowModalBookingLCL(true);
     }
 
     return (
@@ -318,7 +324,10 @@ const User = () => {
                                     <td>31-03-2024</td>
                                     <td>
                                         <div className="button-container">
-                                            <button className="booking">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingLCL()}
+                                            >
                                                 Lấy booking
                                             </button>
                                             <button className="contact">
@@ -353,7 +362,10 @@ const User = () => {
                                     <td>31-03-2024</td>
                                     <td>
                                         <div className="button-container">
-                                            <button className="booking">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingLCL()}
+                                            >
                                                 Lấy booking
                                             </button>
                                             <button className="contact">
@@ -391,7 +403,10 @@ const User = () => {
                                     <td>31-03-2024</td>
                                     <td>
                                         <div className="button-container">
-                                            <button className="booking">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingLCL()}
+                                            >
                                                 Lấy booking
                                             </button>
                                             <button className="contact">
@@ -429,7 +444,10 @@ const User = () => {
                                     <td>31-03-2024</td>
                                     <td>
                                         <div className="button-container">
-                                            <button className="booking">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingLCL()}
+                                            >
                                                 Lấy booking
                                             </button>
                                             <button className="contact">
@@ -467,7 +485,10 @@ const User = () => {
                                     <td>15-03-2024</td>
                                     <td>
                                         <div className="button-container">
-                                            <button className="booking">
+                                            <button
+                                                className="booking"
+                                                onClick={() => handleBookingLCL()}
+                                            >
                                                 Lấy booking
                                             </button>
                                             <button className="contact">
@@ -485,6 +506,10 @@ const User = () => {
                 <ModalBookingFCL
                     show={showModalBookingFCL}
                     setShow={setShowModalBookingFCL}
+                />
+                <ModalBookingLCL
+                    show={showModalBookingLCL}
+                    setShow={setShowModalBookingLCL}
                 />
             </div>
 
