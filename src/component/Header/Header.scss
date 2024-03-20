@@ -117,12 +117,12 @@
             padding: 10px;
             display: flex;
             align-items: center;
-            width: 80%;
+            width: 85%;
             justify-content: space-between;
 
             img {
-                width: 166px;
-                height: 54px;
+                width: 200px;
+                height: 70px;
                 // filter: grayscale(100%);
                 // transition: filter 0.3s ease;
 
@@ -226,19 +226,19 @@
         flex-direction: column;
         align-items: start;
         justify-content: space-between;
-        padding: 0 125px;
+        padding: 0 90px 0 125px;
         background: #183650;
 
         .nav-bar-sub {
             display: flex;
             align-items: center;
-            gap: 410px;
+            gap: 294px;
 
 
             img {
                 margin-top: 20px;
-                width: 166px;
-                height: 54px;
+                width: 200px;
+                height: 70px;
             }
 
             .btn {

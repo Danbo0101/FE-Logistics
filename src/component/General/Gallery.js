@@ -49,7 +49,7 @@ const Gallery = (props) => {
                 >
                     GATEWAY
                 </NavLink>
-                /
+
                 <NavLink
                     className="breadcrumb-item active"
                     exact activeClassName="active"

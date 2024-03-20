@@ -41,7 +41,7 @@ const New = (props) => {
                 >
                     GATEWAY
                 </NavLink>
-                /
+
                 <NavLink
                     className="breadcrumb-item active"
                     exact activeClassName="active"

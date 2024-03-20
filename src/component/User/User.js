@@ -51,10 +51,11 @@ const User = () => {
                                     <th>Loại container</th>
                                     <th>Ngày khởi hành</th>
                                     <th>Thời gian vận chuyển</th>
-                                    <th>Phụ phí</th>
+                                    {/* <th>Phụ phí</th>
                                     <th>Cước vận chuyển</th>
                                     <th>Tổng chi phí</th>
-                                    <th>Thời hạn giá</th>
+                                    <th>Thời hạn giá</th> */}
+                                    <th>Giới thiệu sản phẩm</th>
                                     <th>Booking</th>
                                 </tr>
                             </thead>
@@ -81,10 +82,8 @@ const User = () => {
                                         <div className="day"> 18 ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>9.582.650₫</td>
-                                    <td>125.321.150₫</td>
-                                    <td>134.903.800₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
+
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -122,10 +121,7 @@ const User = () => {
                                         <div className="day"> 18 ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>6.098.050₫ </td>
-                                    <td>21.156.500₫	</td>
-                                    <td>27.254.550₫	</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -163,10 +159,7 @@ const User = () => {
                                         <div className="day"> 18 ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>7.218.100₫ </td>
-                                    <td>547.580₫</td>
-                                    <td>7.765.680₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -204,10 +197,7 @@ const User = () => {
                                         <div className="day"> 18 ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>6.552.000₫</td>
-                                    <td>67.410.000₫	</td>
-                                    <td>73.962.000₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -245,11 +235,7 @@ const User = () => {
                                         <div className="day"> 18 ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>6.720.300₫ </td>
-                                    <td>1.991.200₫	</td>
-                                    <td>1.991.200₫	</td>
-                                    <td>23-03-2024
-                                    </td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -287,11 +273,7 @@ const User = () => {
                                     <th>Cảng đi / Cảng đến</th>
                                     <th>Ngày khởi hành</th>
                                     <th>Thời gian vận chuyển</th>
-                                    <th>Cước vận chuyển</th>
-                                    <th>Phụ phí cảng đi</th>
-                                    <th>Phụ phí cảng đến</th>
-                                    <th>Tổng chi phí</th>
-                                    <th>Thời hạn giá</th>
+                                    <th>Giới thiệu sản phẩm</th>
                                     <th>Booking</th>
                                 </tr>
                             </thead>
@@ -317,11 +299,7 @@ const User = () => {
                                         <div className="day"> 9 Ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>24.890₫/cbm</td>
-                                    <td>1.941.420₫</td>
-                                    <td> - </td>
-                                    <td>1.966.310₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -343,7 +321,10 @@ const User = () => {
                                             src={logoLogistic2}
                                             alt="logoLogistic"
                                         />
-                                        CÔNG TY TNHH VẬN TẢI BÁCH VIỆT
+                                        <div className="name">
+                                            CÔNG TY TNHH VẬN TẢI BÁCH VIỆT
+                                        </div>
+
                                     </td>
                                     <td>
                                         <div className="from">Qingdao</div>
@@ -355,11 +336,7 @@ const User = () => {
                                         <div className="day"> 7 Ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>747.300₫/cbm</td>
-                                    <td> - </td>
-                                    <td>1.245.500₫</td>
-                                    <td>498.200₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -396,11 +373,7 @@ const User = () => {
                                         <div className="day">5 Ngày</div>
                                         <div className="caries">Chuyển tải</div>
                                     </td>
-                                    <td>2.233.800₫/cbm</td>
-                                    <td>2.978.400₫</td>
-                                    <td>1.563.660₫</td>
-                                    <td>6.775.860₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -437,11 +410,7 @@ const User = () => {
                                         <div className="day"> 2 Ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>2.283.440₫/cbm</td>
-                                    <td>372.300₫</td>
-                                    <td> - </td>
-                                    <td>1.911.140₫</td>
-                                    <td>31-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button
@@ -478,11 +447,7 @@ const User = () => {
                                         <div className="day"> 35 Ngày</div>
                                         <div className="caries"> Đi thẳng</div>
                                     </td>
-                                    <td>995.200₫/cbm</td>
-                                    <td>1.194.240₫</td>
-                                    <td>5.635.320₫</td>
-                                    <td>7.824.760₫	</td>
-                                    <td>15-03-2024</td>
+                                    <td>GT sản phẩm</td>
                                     <td>
                                         <div className="button-container">
                                             <button

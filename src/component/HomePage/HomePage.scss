@@ -89,7 +89,7 @@
             .service-main-content {
                 font-size: 16px;
                 // font-weight: 300;
-                font-family: fangsong;
+                font-family: sans-serif;
                 color: rgba(255, 255, 255, 0.5);
 
             }
@@ -100,12 +100,12 @@
             flex-direction: column;
             justify-content: start;
             background: #FFF;
-            height: 50vh;
+            height: 55vh;
             width: 20vw;
             border-radius: 5px;
 
             img {
-                height: 220px;
+
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
             }
@@ -120,15 +120,15 @@
             .service-child-content {
                 padding: 0 20px;
                 padding-bottom: 20px;
-                font-size: 16px;
-                font-family: fangsong;
+                font-size: 14px;
+                font-family: sans-serif;
                 color: rgba(0, 0, 0, 0.5);
             }
 
             .read-more {
                 padding: 0 20px;
                 font-size: 15px;
-                font-family: fantasy;
+                font-family: sans-serif;
                 color: rgba(29, 131, 255, 0.5);
                 cursor: pointer;
 

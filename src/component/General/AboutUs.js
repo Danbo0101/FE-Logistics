@@ -15,7 +15,7 @@ const AboutUs = (props) => {
                     >
                         GATEWAY
                     </NavLink>
-                    /
+
                     <NavLink
                         className="breadcrumb-item"
                         exact activeClassName="active"

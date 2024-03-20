@@ -25,26 +25,37 @@ const Header = (props) => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [imageOpacity, setImageOpacity] = useState(0);
-
+    const [intervalId, setIntervalId] = useState(null);
 
     const images = [
         imgHomePage,
         imgHomePage1,
         imgHomePage2,
         imgHomePage3
-    ]
+    ];
+
+    const startImageTransition = () => {
+        const id = setInterval(() => {
+            setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+            setImageOpacity(0); // Fade out the current image
+        }, 10000);
+        setIntervalId(id);
+    };
 
     useEffect(() => {
-        setImageOpacity(0);
-    }, [currentImage]);
+        startImageTransition();
+
+        return () => {
+            clearTimeout(intervalId);
+        };
+    }, []);
 
     useEffect(() => {
         setTimeout(() => {
-            setImageOpacity(1);
+            setImageOpacity(1); // Fade in the new image
         }, 500);
+    }, [currentImage]);
 
-        return () => clearTimeout();
-    }, [imageOpacity]);
 
     useEffect(() => {
         if (location.pathname === "/user") setIsAuth(true);
@@ -56,22 +67,34 @@ const Header = (props) => {
     const handleClickBtnHomePage = (type) => {
         if (type === "ROAD") {
             setCurrentImage(0);
+            // clearTimeout(intervalId);
+            setImageOpacity(0);
             return;
         }
         if (type === "AIR") {
             setCurrentImage(1);
+            setImageOpacity(0);
             return;
         }
         if (type === "SEA") {
             setCurrentImage(2);
+            setImageOpacity(0);
             return;
         }
         if (type === "WAREHOUSE") {
             setCurrentImage(3);
+            setImageOpacity(0);
             return;
         }
 
     }
+
+    // const handleClickBtnHomePage = (type) => {
+    //     clearTimeout(intervalId);
+    //     setCurrentImage(images.findIndex((image) => image === type));
+    //     setImageOpacity(1);
+    // };
+
 
     return (
         <div className="header-container">
@@ -138,6 +161,7 @@ const Header = (props) => {
                             <span onClick={() => navigate("/gallery")}>Gallery</span>
                             <span onClick={() => navigate("/new")}>News</span>
                             <span onClick={() => navigate("/contact")}>Contact</span>
+                            <span onClick={() => navigate("/user")}>Product</span>
                         </div>
                     </div>
                     <div className="title">
@@ -194,6 +218,7 @@ const Header = (props) => {
                             <span onClick={() => navigate("/gallery")}>Gallery</span>
                             <span onClick={() => navigate("/new")}>News</span>
                             <span onClick={() => navigate("/contact")}>Contact</span>
+                            <span onClick={() => navigate("/user")}>Product</span>
                         </div>
                     </div>
                     <div className="sub-title">

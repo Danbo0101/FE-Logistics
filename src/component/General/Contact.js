@@ -19,7 +19,7 @@ const Contact = (props) => {
                     >
                         GATEWAY
                     </NavLink>
-                    /
+
                     <NavLink
                         className="breadcrumb-item"
                         exact activeClassName="active"
