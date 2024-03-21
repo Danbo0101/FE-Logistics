@@ -25,6 +25,7 @@ const Header = (props) => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [changeImage, setChangeImage] = useState(0);
+    const [changeImage2, setChangeImage2] = useState(0);
     const [imageOpacity, setImageOpacity] = useState(0);
 
     const [intervalId, setIntervalId] = useState(null);
@@ -38,9 +39,9 @@ const Header = (props) => {
 
     const startImageTransition = () => {
         const id = setInterval(() => {
-            setChangeImage((prevImage) => (prevImage + 1) % images.length);
+            setChangeImage2((prevImage) => (prevImage + 1) % images.length);
 
-        }, 10000);
+        }, 5000);
         setIntervalId(id);
     };
 
@@ -48,24 +49,46 @@ const Header = (props) => {
         startImageTransition();
 
         return () => {
-            clearTimeout(intervalId);
+            clearInterval(intervalId);
         };
     }, []);
 
+//    useEffect(() => {
+//        startImageTransition();
+//
+//        return () => {
+//            clearTimeout(intervalId);
+//        };
+//    }, [changeImage]);
 
  
+    useEffect(() => {
+        setImageOpacity(0); // Fade out the new image
+
+        setTimeout(() => {
+          setCurrentImage(changeImage2);
+        }, 900);
+
+        setTimeout(() => {
+          setImageOpacity(1); // Fade in the new image
+        }, 950);
+
+
+  
+    }, [changeImage2]);
 
     useEffect(() => {
         setImageOpacity(0); // Fade out the new image
 
         setTimeout(() => {
           setCurrentImage(changeImage);
-        }, 800);
+        }, 900);
 
         setTimeout(() => {
           setImageOpacity(1); // Fade in the new image
-        }, 850);
+        }, 950);
 
+        clearInterval(intervalId);
   
     }, [changeImage]);
 
