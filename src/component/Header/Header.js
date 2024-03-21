@@ -24,7 +24,9 @@ const Header = (props) => {
     // console.log(title);
 
     const [currentImage, setCurrentImage] = useState(0);
+    const [changeImage, setChangeImage] = useState(0);
     const [imageOpacity, setImageOpacity] = useState(0);
+
     const [intervalId, setIntervalId] = useState(null);
 
     const images = [
@@ -36,8 +38,8 @@ const Header = (props) => {
 
     const startImageTransition = () => {
         const id = setInterval(() => {
-            setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-            setImageOpacity(0); // Fade out the current image
+            setChangeImage((prevImage) => (prevImage + 1) % images.length);
+
         }, 10000);
         setIntervalId(id);
     };
@@ -50,40 +52,52 @@ const Header = (props) => {
         };
     }, []);
 
+
+ 
+
     useEffect(() => {
+        setImageOpacity(0); // Fade out the new image
+
         setTimeout(() => {
-            setImageOpacity(1); // Fade in the new image
-        }, 500);
-    }, [currentImage]);
+          setCurrentImage(changeImage);
+        }, 800);
+
+        setTimeout(() => {
+          setImageOpacity(1); // Fade in the new image
+        }, 850);
+
+  
+    }, [changeImage]);
+
+ 
 
 
-    useEffect(() => {
-        if (location.pathname === "/user") setIsAuth(true);
-    }, [])
+
 
 
 
 
     const handleClickBtnHomePage = (type) => {
+
         if (type === "ROAD") {
-            setCurrentImage(0);
+            setChangeImage(0);
             // clearTimeout(intervalId);
-            setImageOpacity(0);
+            //setImageOpacity(1);
             return;
         }
         if (type === "AIR") {
-            setCurrentImage(1);
-            setImageOpacity(0);
+            setChangeImage(1);
+            //setImageOpacity(1);
             return;
         }
         if (type === "SEA") {
-            setCurrentImage(2);
-            setImageOpacity(0);
+            setChangeImage(2);
+            //setImageOpacity(1);
             return;
         }
         if (type === "WAREHOUSE") {
-            setCurrentImage(3);
-            setImageOpacity(0);
+            setChangeImage(3);
+            //setImageOpacity(1);
             return;
         }
 
@@ -95,6 +109,9 @@ const Header = (props) => {
     //     setImageOpacity(1);
     // };
 
+    useEffect(() => {
+        if (location.pathname === "/user") setIsAuth(true);
+    }, [])
 
     return (
         <div className="header-container">

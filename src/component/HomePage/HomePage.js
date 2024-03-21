@@ -131,8 +131,7 @@ const HomePage = (props) => {
                     </div>
                     <div className="btn-contact">
                         <button
-                            onClick={() => navigate("contact")}
-                        >
+                            onClick={() => navigate("contact")}>
                             Contact Now
                             <FaArrowRight />
                         </button>
