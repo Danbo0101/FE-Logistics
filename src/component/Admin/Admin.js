@@ -1,18 +1,35 @@
 import SideBar from "./SideBar";
 import { FaBars } from 'react-icons/fa';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import './Admin.scss';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const Admin = () => {
 
     const [collapsed, setCollapsed] = useState(false);
-
     const [toggled, setToggled] = useState(false);
+    const [titlePage, setTitlePage] = useState("");
+
+    const location = useLocation();
+
+    useEffect(() => {
+        handleTitlePage();
+    }, [location])
+
+    const handleTitlePage = () => {
+        if (location.pathname === "/admin") {
+            setTitlePage("DashBoard");
+        }
+        if (location.pathname === "/admin/manage-product") {
+            setTitlePage("Manage Product");
+        }
+    }
+
+
 
     const handleCollapsedChange = () => {
         setCollapsed(!collapsed);
@@ -33,8 +50,14 @@ const Admin = () => {
             </div>
             <div className="admin-content">
                 <div className="admin-header">
-                    <div className="left-content" onClick={() => handleCollapsedChange()}>
-                        <FaBars />
+                    <div className="left-content" >
+                        <span onClick={() => handleCollapsedChange()}>
+                            <FaBars />
+                        </span>
+                        <div className="title-page">
+                            {titlePage}
+                        </div>
+
                     </div>
                     <div className="right-content">
                         <NavDropdown title="Setting" id="basic-nav-dropdown">

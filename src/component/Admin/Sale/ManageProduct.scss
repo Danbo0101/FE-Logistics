@@ -1,0 +1,66 @@
+.manage-product-container {
+
+
+    padding: 20px 30px;
+
+    .add-new {
+
+        .react-select__menu {
+
+            overflow-y: auto;
+        }
+
+        .form-floating {
+
+
+            label {
+                padding: 0.75rem 1.5rem !important;
+            }
+
+
+        }
+
+        .shipping-time {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            color: red;
+            gap: 5px;
+
+
+        }
+
+
+        .img-preview {
+
+            height: 150px;
+            border: 1px dashed #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(163, 163, 163);
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .label-upload {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: fit-content;
+            padding: 4px 10px;
+            border-radius: 5px;
+            background: #eeee;
+            cursor: pointer;
+
+            &:hover {
+                background: #dcdcdc;
+            }
+        }
+    }
+}

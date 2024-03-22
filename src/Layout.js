@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
-import ScrollToTop from "./ScrollToTop"
+import { Bounce, ToastContainer } from 'react-toastify';
+
 import App from './App';
 import HomePage from './component/HomePage/HomePage';
 import AboutUs from "./component/General/AboutUs";
@@ -15,6 +16,7 @@ import Register from './component/Auth/Register';
 import ManageProduct from './component/Admin/Sale/ManageProduct';
 import Admin from './component/Admin/Admin';
 import DashBoard from './component/Admin/DashBoard';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -64,6 +66,21 @@ const Layout = () => {
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                transition={Bounce}
+            />
+            <ToastContainer />
         </Suspense>
     )
 

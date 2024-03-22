@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import 'react-pro-sidebar/dist/css/styles.css';
+import logo from "../../assets/logo.png"
 import {
     ProSidebar,
     Menu,
@@ -41,13 +42,13 @@ const SideBar = ({
                 <Menu iconShape="circle">
                     {collapsed ? (
                         <MenuItem
-                            icon={<FaAngleDoubleRight />}
-                            onClick={handleCollapsedChange}
+                            icon={<img src={logo} alt="Logo" />}
+                        // onClick={handleCollapsedChange}
                         ></MenuItem>
                     ) : (
                         <MenuItem
-                            suffix={<FaAngleDoubleLeft />}
-                            onClick={handleCollapsedChange}
+                            icon={<img src={logo} alt="Logo" />}
+                        // onClick={handleCollapsedChange}
                         >
                             <div
                                 style={{
@@ -58,7 +59,7 @@ const SideBar = ({
                                     letterSpacing: '1px'
                                 }}
                             >
-                                GateWay Logistics
+                                GateWay
                             </div>
                         </MenuItem>
                     )}
@@ -72,7 +73,7 @@ const SideBar = ({
                     // suffix={<span className="badge red">NEW</span>}
                     >
                         Dashboard
-                        <NavLink to="/" />
+                        <NavLink to="/admin" />
                     </MenuItem>
                     {/* <MenuItem icon={<FaGem />}>Components </MenuItem> */}
                     <MenuItem icon={<FaGem />}>
