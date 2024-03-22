@@ -34,6 +34,7 @@ const User = () => {
 
     useEffect(() => {
         fetchListProduct();
+        console.log(listLCL);
     }, []);
 
     const fetchListProduct = async () => {
