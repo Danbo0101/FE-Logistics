@@ -12,6 +12,9 @@ import NewDetail from './component/General/New/NewDetail';
 import Login from './component/Auth/Login';
 import User from './component/User/User';
 import Register from './component/Auth/Register';
+import ManageProduct from './component/Admin/Sale/ManageProduct';
+import Admin from './component/Admin/Admin';
+import DashBoard from './component/Admin/DashBoard';
 
 
 
@@ -41,6 +44,11 @@ const Layout = () => {
 
                 <Route path='/login' element={<Login />} />
                 <Route path='/sign-up' element={<Register />} />
+
+                <Route path='/admin' element={<Admin />}>
+                    <Route index element={<DashBoard />} />
+                    <Route path="manage-product" element={<ManageProduct />} />
+                </Route>
 
                 <Route path='/user' element={<User />} />
                 <Route path="/" element={<App />}>

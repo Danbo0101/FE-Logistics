@@ -53,46 +53,46 @@ const Header = (props) => {
         };
     }, []);
 
-//    useEffect(() => {
-//        startImageTransition();
-//
-//        return () => {
-//            clearTimeout(intervalId);
-//        };
-//    }, [changeImage]);
+    //    useEffect(() => {
+    //        startImageTransition();
+    //
+    //        return () => {
+    //            clearTimeout(intervalId);
+    //        };
+    //    }, [changeImage]);
 
- 
+
     useEffect(() => {
         setImageOpacity(0); // Fade out the new image
 
         setTimeout(() => {
-          setCurrentImage(changeImage2);
+            setCurrentImage(changeImage2);
         }, 900);
 
         setTimeout(() => {
-          setImageOpacity(1); // Fade in the new image
+            setImageOpacity(1); // Fade in the new image
         }, 950);
 
 
-  
+
     }, [changeImage2]);
 
     useEffect(() => {
         setImageOpacity(0); // Fade out the new image
 
         setTimeout(() => {
-          setCurrentImage(changeImage);
+            setCurrentImage(changeImage);
         }, 900);
 
         setTimeout(() => {
-          setImageOpacity(1); // Fade in the new image
+            setImageOpacity(1); // Fade in the new image
         }, 950);
 
         clearInterval(intervalId);
-  
+
     }, [changeImage]);
 
- 
+
 
 
 
@@ -133,8 +133,15 @@ const Header = (props) => {
     // };
 
     useEffect(() => {
-        if (location.pathname === "/user") setIsAuth(true);
+        handleCheckAuth();
     }, [])
+
+
+    const handleCheckAuth = () => {
+        if (location.pathname === "/user") setIsAuth(true);
+        if (location.pathname === "/admin") setIsAuth(true);
+
+    }
 
     return (
         <div className="header-container">
