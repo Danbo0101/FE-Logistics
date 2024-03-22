@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import 'react-pro-sidebar/dist/css/styles.css';
 import {
     ProSidebar,
     Menu,
