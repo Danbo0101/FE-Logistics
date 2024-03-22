@@ -67,7 +67,7 @@ const Header = (props) => {
 
         setTimeout(() => {
             setCurrentImage(changeImage2);
-        }, 900);
+        }, 800);
 
         setTimeout(() => {
             setImageOpacity(1); // Fade in the new image
@@ -82,11 +82,11 @@ const Header = (props) => {
 
         setTimeout(() => {
             setCurrentImage(changeImage);
-        }, 900);
+        }, 800);
 
         setTimeout(() => {
             setImageOpacity(1); // Fade in the new image
-        }, 950);
+        }, 1100);
 
         clearInterval(intervalId);
 

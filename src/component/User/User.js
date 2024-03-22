@@ -1,11 +1,8 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Table from 'react-bootstrap/Table';
-import logoLogistic1 from "../../assets/logo-logistics1.png";
-import logoLogistic2 from "../../assets/logo-logistics2.png";
-import logoLogistic3 from "../../assets/logo-logistics3.png";
-import logoLogistic4 from "../../assets/logo-logistics4.png";
-import logoLogistic5 from "../../assets/logo-logistics5.png";
+import logo from "../../assets/logo.png";
+
 import { CiMail } from "react-icons/ci";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import "./User.scss"
@@ -71,11 +68,11 @@ const User = () => {
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic2}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            TTHQSaiGon
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -105,14 +102,20 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic2}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            CÔNG TY TNHH VẬN TẢI BÁCH VIỆT
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -142,14 +145,20 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic2}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            CÔNG TY TNHH THƯƠNG MẠI VÀ GIAO NHẬN AV
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -179,14 +188,20 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic2}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            TC SHIPPINGs
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -216,14 +231,20 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic2}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            SUN VN TRANSPORT CORPORATION
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -259,6 +280,14 @@ const User = () => {
                     </div>
                 </div>
 
+
+
+
+
+
+
+
+
                 <div className="logistics-fcl">
                     <div className="title-logistic">
                         <div className="name">
@@ -286,15 +315,22 @@ const User = () => {
                                     <th>Booking</th>
                                 </tr>
                             </thead>
+
+
                             <tbody>
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic2}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            DNLSHIPPING CORPORATION CO.,LTD
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -326,14 +362,20 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic4}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ LƯU PHƯỚC LỘC
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -364,14 +406,20 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic5}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            DAHNAY LOGISTICS VIETNAM
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -402,14 +450,19 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic1}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            CÔNG TY CP INTERLINK
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -440,14 +493,17 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
                                 <tr>
                                     <td className="company-name">
                                         <img
-                                            src={logoLogistic3}
+                                            src={logo}
                                             alt="logoLogistic"
                                         />
                                         <div className="name">
-                                            CÔNG TY TNHH VẬN TẢI BÁCH VIỆT
+                                            Gateway Logistics
                                         </div>
 
                                     </td>
@@ -478,7 +534,12 @@ const User = () => {
                                         </div>
                                     </td>
                                 </tr>
+
+
+
                             </tbody>
+
+
                         </Table>
                     </div>
                 </div>
