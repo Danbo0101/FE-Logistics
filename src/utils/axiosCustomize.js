@@ -9,8 +9,8 @@ nProgress.configure({
 })
 
 const instance = axios.create({
-    // baseURL: 'http://api.gatewayviet.com:8081/',
-    baseURL: 'http://localhost:8081/',
+    baseURL: 'http://api.gatewayviet.com:8081/',
+    // baseURL: 'http://localhost:8081/',
 });
 
 // Add a request interceptor

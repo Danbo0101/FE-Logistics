@@ -13,12 +13,16 @@ import ModalBookingFCL from "./Modal/ModalBookingFCL";
 import ModalBookingLCL from "./Modal/ModalBookingLCL";
 import { useEffect, useState } from "react";
 // import { getAllUser } from "../../services/adminServices";
-// import { getAllProduct } from "../../services/adminServices";
+import { getAllProduct } from "../../services/adminServices";
 
 const User = () => {
 
+    const linkSkype = "https://join.skype.com/invite/pyKiMVuGd0CO";
+
     const [showModalBookingFCL, setShowModalBookingFCL] = useState(false);
     const [showModalBookingLCL, setShowModalBookingLCL] = useState(false);
+
+    const [listLCL, setListLCL] = useState([]);
 
     const handleBookingFCL = () => {
         setShowModalBookingFCL(true);
@@ -28,15 +32,16 @@ const User = () => {
         setShowModalBookingLCL(true);
     }
 
-    // useEffect(() => {
-    //     fetchListProduct();
-    // }, [])
+    useEffect(() => {
+        fetchListProduct();
+    }, []);
 
-    // const fetchListProduct = async () => {
+    const fetchListProduct = async () => {
 
-    //     let res = await getAllProduct();
-    //     console.log(res);
-    // }
+        let res = await getAllProduct();
+        setListLCL(res);
+
+    }
 
     return (
         <div className="user-home-page">
@@ -68,191 +73,66 @@ const User = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td className="company-name">
-                                        <img
-                                            src={logoLogistic2}
-                                            alt="logoLogistic"
-                                        />
-                                        <div className="name">
-                                            TTHQSaiGon
-                                        </div>
+                                {listLCL && listLCL.length > 0 &&
+                                    listLCL.map(
+                                        (item, index) => {
+                                            return (
+                                                <>
+                                                    <tr>
+                                                        <td className="company-name">
+                                                            {item.icon ?
+                                                                <img
+                                                                    src={item.icon}
+                                                                    alt="logoLogistic"
+                                                                />
+                                                                :
+                                                                <></>
+                                                            }
 
-                                    </td>
-                                    <td>
-                                        <div className="from">Ho Chi Minh (Cat Lai)</div>
-                                        -
-                                        <div className="to">Tokyo</div>
-                                    </td>
-                                    <td>Thứ 3/ Thứ 4/ Thứ 6/ Chủ nhật</td>
-                                    <td>
-                                        <div className="day"> 9 Ngày</div>
-                                        <div className="caries"> Đi thẳng</div>
-                                    </td>
-                                    <td>GT sản phẩm</td>
-                                    <td>
-                                        <div className="button-container">
-                                            <button
-                                                className="booking"
-                                                onClick={() => handleBookingLCL()}
-                                            >
-                                                Lấy booking
-                                            </button>
-                                            <button className="contact">
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="company-name">
-                                        <img
-                                            src={logoLogistic2}
-                                            alt="logoLogistic"
-                                        />
-                                        <div className="name">
-                                            CÔNG TY TNHH VẬN TẢI BÁCH VIỆT
-                                        </div>
+                                                            <div className="name">
+                                                                {item.dvvc}
+                                                            </div>
 
-                                    </td>
-                                    <td>
-                                        <div className="from">Qingdao</div>
-                                        -
-                                        <div className="to">Hai Phong</div>
-                                    </td>
-                                    <td>Thứ 3</td>
-                                    <td>
-                                        <div className="day"> 7 Ngày</div>
-                                        <div className="caries"> Đi thẳng</div>
-                                    </td>
-                                    <td>GT sản phẩm</td>
-                                    <td>
-                                        <div className="button-container">
-                                            <button
-                                                className="booking"
-                                                onClick={() => handleBookingLCL()}
-                                            >
-                                                Lấy booking
-                                            </button>
-                                            <button className="contact">
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="company-name">
-                                        <img
-                                            src={logoLogistic2}
-                                            alt="logoLogistic"
-                                        />
-                                        <div className="name">
-                                            CÔNG TY TNHH THƯƠNG MẠI VÀ GIAO NHẬN AV
-                                        </div>
+                                                        </td>
+                                                        <td>
+                                                            <div className="from">{item.noiDi}</div>
+                                                            -
+                                                            <div className="to">{item.noiDen}</div>
+                                                        </td>
+                                                        <td>Thứ 3/ Thứ 4/ Thứ 6/ Chủ nhật</td>
+                                                        <td>
+                                                            <div className="day">{item.tgvc} days</div>
+                                                            {/* <div className="caries"> Đi thẳng</div> */}
+                                                        </td>
+                                                        <td>GT sản phẩm</td>
+                                                        <td>
+                                                            <div
+                                                                className="button-container">
+                                                                {/* <button
+                                                                    className="booking"
+                                                                    onClick={() => handleBookingLCL()}
+                                                                >
+                                                                    Lấy booking
+                                                                </button> */}
+                                                                <a href={linkSkype}>
+                                                                    <button
 
-                                    </td>
-                                    <td>
-                                        <div className="from">Shanghai</div>
-                                        -
-                                        <div className="to">Hai Phong</div>
-                                    </td>
-                                    <td>Thứ 2/ Thứ 3</td>
-                                    <td>
-                                        <div className="day">5 Ngày</div>
-                                        <div className="caries">Chuyển tải</div>
-                                    </td>
-                                    <td>GT sản phẩm</td>
-                                    <td>
-                                        <div className="button-container">
-                                            <button
-                                                className="booking"
-                                                onClick={() => handleBookingLCL()}
-                                            >
-                                                Lấy booking
-                                            </button>
-                                            <button className="contact">
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="company-name">
-                                        <img
-                                            src={logoLogistic2}
-                                            alt="logoLogistic"
-                                        />
-                                        <div className="name">
-                                            TC SHIPPINGs
-                                        </div>
+                                                                        className="contact">
+                                                                        <CiMail />
+                                                                        Liên hệ
+                                                                    </button>
+                                                                </a>
 
-                                    </td>
-                                    <td>
-                                        <div className="from">Hoc Mon</div>
-                                        -
-                                        <div className="to">Singapore</div>
-                                    </td>
-                                    <td>Thứ 2</td>
-                                    <td>
-                                        <div className="day"> 2 Ngày</div>
-                                        <div className="caries"> Đi thẳng</div>
-                                    </td>
-                                    <td>GT sản phẩm</td>
-                                    <td>
-                                        <div className="button-container">
-                                            <button
-                                                className="booking"
-                                                onClick={() => handleBookingLCL()}
-                                            >
-                                                Lấy booking
-                                            </button>
-                                            <button className="contact">
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="company-name">
-                                        <img
-                                            src={logoLogistic2}
-                                            alt="logoLogistic"
-                                        />
-                                        <div className="name">
-                                            SUN VN TRANSPORT CORPORATION
-                                        </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
 
-                                    </td>
-                                    <td>
-                                        <div className="from">Ho Chi Minh (Cat Lai)</div>
-                                        -
-                                        <div className="to">New York</div>
-                                    </td>
-                                    <td>Thứ 6</td>
-                                    <td>
-                                        <div className="day"> 35 Ngày</div>
-                                        <div className="caries"> Đi thẳng</div>
-                                    </td>
-                                    <td>GT sản phẩm</td>
-                                    <td>
-                                        <div className="button-container">
-                                            <button
-                                                className="booking"
-                                                onClick={() => handleBookingLCL()}
-                                            >
-                                                Lấy booking
-                                            </button>
-                                            <button className="contact">
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                                </>
+                                            )
+                                        }
+                                    )}
+
+
 
                             </tbody>
                         </Table>

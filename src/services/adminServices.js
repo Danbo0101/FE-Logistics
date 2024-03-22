@@ -9,6 +9,6 @@ const getAllProduct = () => {
 // }
 
 export {
-    // getAllProduct
+    getAllProduct
     // getAllUser
 }
