@@ -53,19 +53,11 @@ const ManageProduct = () => {
             toast.warn("Invalid Shipping Day");
             setIsShippingTime(false);
         }
-
-
-
     }
 
     useEffect(() => {
         handleCalculateSkippingTime();
     }, [arrivalDay, departDay])
-
-
-
-
-
 
 
     const handleUploadLogo = (event) => {

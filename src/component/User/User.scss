@@ -68,6 +68,10 @@
 
                     td.company-name {
 
+                        font-size: 20px;
+                        color: rgb(64, 64, 255);
+                        margin-top: 10px;
+
                         display: flex;
                         align-items: center;
                         justify-content: start;
@@ -76,7 +80,7 @@
 
 
                         img {
-                            width: 10%;
+                            width: 30%;
                         }
 
                         .name {
