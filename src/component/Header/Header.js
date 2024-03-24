@@ -351,7 +351,7 @@ const Header = (props) => {
                                     <span onClick={() => navigate("/gallery")}>Gallery</span>
                                     <span onClick={() => navigate("/new")}>News</span>
                                     <span onClick={() => navigate("/contact")}>Contact</span>
-                                    {/* <span onClick={() => navigate("/user")}>Product</span> */}
+                                    <span onClick={() => navigate("/user")}>Product</span>
                                 </div>
                             </div>
                             <div className="title">
@@ -408,7 +408,7 @@ const Header = (props) => {
                                     <span onClick={() => navigate("/gallery")}>Gallery</span>
                                     <span onClick={() => navigate("/new")}>News</span>
                                     <span onClick={() => navigate("/contact")}>Contact</span>
-                                    {/* <span onClick={() => navigate("/user")}>Product</span> */}
+                                    <span onClick={() => navigate("/user")}>Product</span>
                                 </div>
                             </div>
                             <div className="sub-title">
