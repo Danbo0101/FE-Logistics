@@ -67,15 +67,12 @@
                     font-size: 14px;
 
                     td.company-name {
-
-                        font-size: 20px;
+                        font-size: 18px;
                         color: rgb(64, 64, 255);
-                        margin-top: 10px;
-
                         display: flex;
                         align-items: center;
                         justify-content: start;
-                        gap: 20px;
+                        gap: 15px;
                         padding: 30px 20px;
 
 
@@ -91,36 +88,56 @@
                             height: -webkit-fill-available;
                         }
 
+
+
+
                     }
 
+                    .button-container {
+                        button.booking {
+                            background-color: rgb(0, 106, 255);
+                            margin-bottom: 10px;
+                            color: #fff;
+                            font-size: 12px;
+                            white-space: nowrap;
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: rgb(8, 0, 255);
+                            }
+                        }
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                            flex-wrap: nowrap;
+                            font-size: 12px;
+                            white-space: nowrap;
 
 
-                    button.booking {
-                        background-color: rgb(0, 106, 255);
-                        margin-bottom: 10px;
-                        color: #fff;
-                        font-size: 12px;
-                        white-space: nowrap;
-
-                        &:hover {
-                            cursor: pointer;
-                            background-color: rgb(8, 0, 255);
+                            &:hover {
+                                background-color: rgb(158, 158, 158);
+                            }
                         }
                     }
 
-                    button.contact {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 5px;
-                        flex-wrap: nowrap;
-                        font-size: 12px;
-                        white-space: nowrap;
 
-                        &:hover {
-                            background-color: rgb(158, 158, 158);
-                        }
-                    }
+
+
+
+
+
+
+                    // .contact-show {
+                    //     display: flex;
+                    //     gap: 15px;
+                    //     justify-content: center;
+                    //     align-items: center;
+                    //     color: blue;
+                    //     font-size: 20px;
+                    // }
 
                     // .action {
                     //     display: flex;
@@ -129,24 +146,36 @@
 
                     // }
 
-                    // .button-container {
-                    //     display: flex;
-                    //     justify-content: center;
-                    //     align-items: center;
-                    //     flex-direction: column;
-                    // }
+                    .button-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
 
-                    // .booking,
-                    // .contact {
-                    //     white-space: nowrap;
-                    //     /* Ngăn chặn xuống dòng */
-                    //     margin: 0 5px;
-                    //     /* Khoảng cách giữa hai nút */
-                    // }
+                    }
+
+                    .booking,
+                    .contact {
+                        white-space: nowrap;
+                        /* Ngăn chặn xuống dòng */
+                        margin: 0 5px;
+                        /* Khoảng cách giữa hai nút */
+                    }
 
 
                 }
             }
         }
     }
+
+
+}
+
+.tooltip-inner {
+    background: rgb(27, 27, 27);
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    padding: 5px 16px;
+    border: 0.5px solid;
 }

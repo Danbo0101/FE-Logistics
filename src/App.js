@@ -54,6 +54,7 @@ const App = () => {
         <Header
           isHomePage={isHomePage}
           title={title}
+          setTitle={setTitle}
         />
       </div>
       <div className='main-container'>

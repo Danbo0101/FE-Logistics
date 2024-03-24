@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import './Login.scss'
 import { useState } from 'react';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { ImSpinner6 } from "react-icons/im";
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import HeaderAuth from '../Header/HeaderAuth';
+import _ from "lodash";
 // import { doLogin } from '../../redux/action/userAction';
 
 
@@ -19,56 +20,93 @@ const Login = (props) => {
     // const dispatch = useDispatch();
     // const { t } = useTranslation();
 
-    // const [dataClone, setDataClone] = useState({
-    //     email: "p@gmail.com",
-    //     name: "Phuong",
-    //     role: "ADMIN"
-    // })
+    const [data, setData] = useState([
+        {
+            id: 1,
+            email: "p@gmail.com",
+            name: "Phuong",
+            password: "123456",
+            role: "USER"
+        },
+        {
+            id: 2,
+            email: "t@gmail.com",
+            name: "THUAN",
+            password: "123456",
+            role: "ADMIN"
+        },
+
+    ])
 
 
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
-    // const [isLoading, setIsLoading] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
-    // const handleKeyDown = (event) => {
-    //     console.log(event.key);
-    //     if (event.key === "Enter") {
-    //         handleLogin();
-    //     }
-    // }
+    const handleKeyDown = (event) => {
+        console.log(event.key);
+        if (event.key === "Enter") {
+            handleLogin();
+        }
+    }
 
-    // const validateEmail = (email) => {
-    //     return String(email)
-    //         .toLowerCase()
-    //         .match(
-    //             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    //         );
-    // };
-
-
-
-    // const handleLogin = () => {
-    //     let isValidEmail = validateEmail(email)
-    //     if (!isValidEmail) {
-    //         toast.error(t('login.email.error'))
-    //         return;
-    //     }
-    //     if (!password) {
-    //         toast.error(t('login.password.error'))
-    //         return;
-    //     }
-    //     setIsLoading(true);
-
-    //     dispatch(doLogin(dataClone));
+    const validateEmail = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+    };
 
 
-    //     toast.success(t('login.success'))
-    //     // setTimeout(handleLogin, 3000)
 
-    //     navigate('/')
+    const handleLogin = () => {
+        let isValidEmail = validateEmail(email)
+        if (!isValidEmail) {
+            toast.error("Invalid Email")
+            return;
+        }
+        if (!password) {
+            toast.error("Invalid Password")
+            return;
+        }
+        setIsLoading(true);
+
+        handleDataLogin();
+
+        // if (email === "p@gmail.com" && password === "123456") {
+        //     alert("me");
+        //     navigate("/user");
+        // }
 
 
-    // }
+
+        // dispatch(doLogin(dataClone));
+
+
+
+        // setTimeout(handleLogin, 3000)
+
+        // navigate('/')
+
+
+    }
+
+    const handleDataLogin = () => {
+        let dataClone = _.cloneDeep(data);
+        dataClone.map((user, index) => {
+            if (user.email === email && user.password === password) {
+                if (user.role === "ADMIN") {
+                    navigate("/admin")
+                    return;
+                }
+                else {
+                    navigate("/user")
+                    return;
+                }
+            }
+        })
+    }
 
 
     return (
@@ -100,10 +138,10 @@ const Login = (props) => {
                                 <input
                                     type="email"
                                     className="form-control"
-                                    // value={email}
+                                    value={email}
                                     placeholder="Email ...."
-                                // onChange={(event) => setEmail(event.target.value)}
-                                // onKeyDown={(event) => handleKeyDown(event)}
+                                    onChange={(event) => setEmail(event.target.value)}
+                                    onKeyDown={(event) => handleKeyDown(event)}
                                 />
                             </div>
                             <div className="form-group">
@@ -111,10 +149,10 @@ const Login = (props) => {
                                 <input
                                     type="password"
                                     className="form-control"
-                                    // value={password}
+                                    value={password}
                                     placeholder="Password ..."
-                                // onChange={(event) => setPassword(event.target.value)}
-                                // onKeyDown={(event) => handleKeyDown(event)}
+                                    onChange={(event) => setPassword(event.target.value)}
+                                    onKeyDown={(event) => handleKeyDown(event)}
                                 />
                             </div>
                             <span
@@ -125,16 +163,16 @@ const Login = (props) => {
                             <div>
                                 <button
                                     className="btn-submit"
-                                // onClick={() => handleLogin()}
-                                // disabled={isLoading}
+                                    onClick={() => handleLogin()}
+                                    disabled={isLoading}
                                 >Login
-                                    {/* {isLoading === true && <ImSpinner6 className="loader-icon" />} */}
+                                    {isLoading === true && <ImSpinner6 className="loader-icon" />}
                                 </button>
                             </div>
                             <div className='sign-up'>
                                 Don’t have an account?
                                 <span
-                                // onClick={() => navigate('/register')}
+                                    onClick={() => navigate('/register')}
                                 >  Sign Up
                                 </span>
 

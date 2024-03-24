@@ -8,6 +8,7 @@ import imgHomePage1 from "../../assets/homepage-2.jpeg";
 import imgHomePage2 from "../../assets/homepage-3.jpeg";
 import imgHomePage3 from "../../assets/homepage-4.jpeg";
 import logo from "../../assets/logo.png";
+import HomePage from "../HomePage/HomePage";
 
 
 
@@ -18,6 +19,8 @@ const Header = (props) => {
 
     const { isHomePage, title } = props;
     const [isAuth, setIsAuth] = useState(false);
+    const [titleUser, setTitleUser] = useState("")
+
 
 
 
@@ -134,12 +137,37 @@ const Header = (props) => {
 
     useEffect(() => {
         handleCheckAuth();
-    }, [])
+        handleTitle();
+
+    }, [location])
 
 
     const handleCheckAuth = () => {
-        if (location.pathname === "/user") setIsAuth(true);
-        if (location.pathname === "/admin") setIsAuth(true);
+        if (location.pathname === "/user") {
+            setIsAuth(true);
+        }
+
+    }
+
+    const handleTitle = () => {
+        if (location.pathname === "/user") {
+            setTitleUser("HOME PAGE");
+        }
+        if (location.pathname === "/user/about-us") {
+            setTitleUser("ABOUT US");
+        }
+        if (location.pathname === "/user/service") {
+            setTitleUser("SERVICE");
+        }
+        if (location.pathname === "/user/gallery") {
+            setTitleUser("GALLERY");
+        }
+        if (location.pathname === "/user/new") {
+            setTitleUser("NEW");
+        }
+        if (location.pathname === "/user/contact") {
+            setTitleUser("CONTACT");
+        }
 
     }
 
@@ -188,7 +216,7 @@ const Header = (props) => {
 
             </div>
 
-            {isHomePage ?
+            {/* {isHomePage ?
                 <div className="overview">
                     <img
                         src={images[currentImage]}
@@ -274,12 +302,127 @@ const Header = (props) => {
 
 
                 </div>
+            } */}
+            {isAuth ?
+                (
+
+                    <div className="header-sub-container">
+                        <div className="nav-bar-sub">
+                            <div
+                                className="logo"
+                                onClick={() => navigate("/")}
+                            >
+                                <img src={logo} />
+                            </div>
+                            <div className="btn">
+                                <span onClick={() => navigate("/user")}>Home</span>
+                                <span onClick={() => navigate("/user/about-us")}>About Us</span>
+                                <span onClick={() => navigate("/user/service")}>Service</span>
+                                <span onClick={() => navigate("/user/gallery")}>Gallery</span>
+                                <span onClick={() => navigate("/user/new")}>News</span>
+                                <span onClick={() => navigate("/user/contact")}>Contact</span>
+                            </div>
+                        </div>
+                        <div className="sub-title">
+                            {titleUser}
+                        </div>
+
+
+                    </div>
+                )
+                : (
+                    isHomePage ?
+                        <div className="overview">
+                            <img
+                                src={images[currentImage]}
+                                style={{ opacity: imageOpacity, transition: 'opacity 1s' }}
+                            />
+                            <div className="header-home-container">
+                                <div
+                                    className="logo"
+                                    onClick={() => navigate("/")}
+                                >
+                                    <img src={logo} />
+                                </div>
+                                <div className="btn">
+                                    <span onClick={() => navigate("/")}>Home</span>
+                                    <span onClick={() => navigate("/about-us")}>About Us</span>
+                                    <span onClick={() => navigate("/service")}>Service</span>
+                                    <span onClick={() => navigate("/gallery")}>Gallery</span>
+                                    <span onClick={() => navigate("/new")}>News</span>
+                                    <span onClick={() => navigate("/contact")}>Contact</span>
+                                    {/* <span onClick={() => navigate("/user")}>Product</span> */}
+                                </div>
+                            </div>
+                            <div className="title">
+                                <hr className="custom-hr" />
+                                <div className="title-main">
+                                    TRANSATLANTIC DELIVERY
+                                </div>
+                                <div className="title-sub">
+                                    Assuring the compliant handling of temperature sensitive healthcare products in today's complex supply chain is one of the foremost challenges facing
+                                </div>
+
+                            </div>
+                            <div className="slide-nav">
+
+                                <span
+                                    className="name"
+                                    onClick={() => handleClickBtnHomePage("ROAD")}
+                                >
+                                    Road Freight
+                                </span>
+                                <span
+                                    className="name"
+                                    onClick={() => handleClickBtnHomePage("AIR")}
+                                >
+                                    Air Freight
+                                </span>
+                                <span
+                                    className="name"
+                                    onClick={() => handleClickBtnHomePage("SEA")}
+                                >
+                                    Sea Freight
+                                </span>
+                                <span
+                                    className="name"
+                                    onClick={() => handleClickBtnHomePage("WAREHOUSE")}
+                                >
+                                    WareHousing
+                                </span>
+                            </div>
+                        </div>
+                        :
+                        <div className="header-sub-container">
+                            <div className="nav-bar-sub">
+                                <div
+                                    className="logo"
+                                    onClick={() => navigate("/")}
+                                >
+                                    <img src={logo} />
+                                </div>
+                                <div className="btn">
+                                    <span onClick={() => navigate("/")}>Home</span>
+                                    <span onClick={() => navigate("/about-us")}>About Us</span>
+                                    <span onClick={() => navigate("/service")}>Service</span>
+                                    <span onClick={() => navigate("/gallery")}>Gallery</span>
+                                    <span onClick={() => navigate("/new")}>News</span>
+                                    <span onClick={() => navigate("/contact")}>Contact</span>
+                                    {/* <span onClick={() => navigate("/user")}>Product</span> */}
+                                </div>
+                            </div>
+                            <div className="sub-title">
+                                {title}
+                            </div>
+
+
+                        </div>
+                )
             }
 
 
 
-
-        </div>
+        </div >
     )
 }
 

@@ -17,6 +17,7 @@ import ManageProduct from './component/Admin/Sale/ManageProduct';
 import Admin from './component/Admin/Admin';
 import DashBoard from './component/Admin/DashBoard';
 import 'react-toastify/dist/ReactToastify.css';
+import Booking from './component/User/Booking';
 
 
 
@@ -52,7 +53,17 @@ const Layout = () => {
                     <Route path="manage-product" element={<ManageProduct />} />
                 </Route>
 
-                <Route path='/user' element={<User />} />
+                <Route path='/user' element={<User />} >
+                    <Route index element={<Booking />} />
+                    <Route path="home-page" element={<HomePage />} />
+                    <Route path="about-us" element={<AboutUs />} />
+                    <Route path="service" element={<Service />} />
+                    <Route path="gallery" element={<Gallery />} />
+                    <Route path="new" element={<New />}>
+                        {/* <Route path="new-detail" element={<NewDetail />} /> */}
+                    </Route>
+                    <Route path="contact" element={<Contact />} />
+                </Route>
                 <Route path="/" element={<App />}>
                     <Route index element={<HomePage />} />
                     <Route path="about-us" element={<AboutUs />} />
