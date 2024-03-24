@@ -91,11 +91,15 @@ const Booking = () => {
                                                                 alt="logoLogistic"
                                                             />
                                                             :
-                                                            <></>
+                                                            <img
+                                                                src={logo}
+                                                                alt="logoLogistic"
+                                                            />
                                                         }
 
                                                         <div className="name">
-                                                            {item.dvvc}
+                                                            {/* {item.dvvc} */}
+                                                            Gateway Logistics
                                                         </div>
 
                                                     </td>
@@ -160,7 +164,7 @@ const Booking = () => {
                                         )
                                     }
                                 )}
-                            {/* <tr>
+                            <tr>
                                 <td className="company-name">
                                     <img
                                         src={logo}
@@ -183,69 +187,42 @@ const Booking = () => {
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
                                 <td>GT sản phẩm</td>
-
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        {showContact && activeRow === "0" ?
-                                            <>
-                                            </>
-                                            :
-                                            <button
-                                                className="contact"
-                                                onClick={() => handleShowContact("0")}
-                                            >
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        }
-                                        {showContact && activeRow === "0" ?
-                                            <div className="contact-show">
-                                                <a href={linkFb}>
-                                                    <FaFacebook />
-                                                </a>
-                                                <a href={linkSkype}>
-                                                    <FaSkype />
-                                                </a>
+                                        <button
+                                            ref={ref => target.current[2] = ref}
+                                            onClick={() => handleShowContact(2)}
+                                            className={`contact-${2}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[2]} show={show[2]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={2} {...props}
 
-                                            </div>
-                                            :
-                                            <></>
-                                        }
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
 
                                     </div>
-                                    <Button variant="danger" ref={target} onClick={() => setShowContact(!showContact)}>
-                                        Click me to see
-                                    </Button>
-                                    <Overlay target={target.current} show={showContact} placement="right">
-                                        {({
-                                            placement: _placement,
-                                            arrowProps: _arrowProps,
-                                            show: _showContact,
-                                            popper: _popper,
-                                            hasDoneInitialMeasure: _hasDoneInitialMeasure,
-                                            ...props
-                                        }) => (
-                                            <div
-                                                {...props}
-                                                style={{
-                                                    position: 'absolute',
-                                                    backgroundColor: 'rgba(255, 100, 100, 0.85)',
-                                                    padding: '2px 10px',
-                                                    color: 'white',
-                                                    borderRadius: 3,
-                                                    ...props.style,
-                                                }}
-                                            >
-                                                Simple tooltip
-                                            </div>
-                                        )}
-                                    </Overlay>
                                 </td>
                             </tr>
                             <tr>
@@ -271,47 +248,49 @@ const Booking = () => {
                                 </td>
                                 <td>GT sản phẩm</td>
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        {showContact && activeRow === "1" ?
-                                            <>
-                                            </>
-                                            :
-                                            <button
-                                                className="contact"
-                                                onClick={() => handleShowContact("1")}
-                                            >
-                                                <CiMail />
-                                                Liên hệ
-                                            </button>
-                                        }
-                                        {showContact && activeRow === "1" ?
-                                            <div className="contact-show">
-                                                <a href={linkFb}>
-                                                    <FaFacebook />
-                                                </a>
-                                                <a href={linkSkype}>
-                                                    <FaSkype />
-                                                </a>
+                                        <button
+                                            ref={ref => target.current[3] = ref}
+                                            onClick={() => handleShowContact(3)}
+                                            className={`contact-${3}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[3]} show={show[3]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={3} {...props}
 
-                                            </div>
-                                            :
-                                            <></>
-                                        }
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
+
                                     </div>
                                 </td>
-                            </tr> */}
+                            </tr>
 
 
                         </tbody>
-                    </Table>
-                </div>
-            </div>
+                    </Table >
+                </div >
+            </div >
 
             <div className="logistics-fcl">
                 <div className="title-logistic">
