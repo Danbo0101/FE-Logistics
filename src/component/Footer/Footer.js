@@ -106,23 +106,37 @@ const Footer = () => {
                     <div className="content">
                         <div className="child">
                             <IoIosArrowForward />
-                            𝗣𝗵𝗮̂𝗻 𝗯𝗶𝗲̣̂𝘁 𝗵𝗮̀𝗻𝗴 𝗰𝗵𝘂𝘆𝗲̂̉𝗻 𝘁𝗮̉𝗶 (𝗩𝗜𝗔) 𝘃𝗮̀ 𝗵𝗮̀𝗻𝗴 𝘁𝗿𝘂̛̣𝗰 𝘁𝗶𝗲̂́𝗽 (𝗗𝗶𝗿𝗲𝗰𝘁)
+                            <a href="https://gatewayviet.com.vn/2020/04/30/%f0%9d%97%a3%f0%9d%97%b5%f0%9d%97%ae%cc%82%f0%9d%97%bb-%f0%9d%97%af%f0%9d%97%b6%f0%9d%97%b2%cc%a3%cc%82%f0%9d%98%81-%f0%9d%97%b5%f0%9d%97%ae%f0%9d%97%bb%f0%9d%97%b4-%f0%9d%97%b0%f0%9d%97%b5/">
+                                𝗣𝗵𝗮̂𝗻 𝗯𝗶𝗲̣̂𝘁 𝗵𝗮̀𝗻𝗴 𝗰𝗵𝘂𝘆𝗲̂̉𝗻 𝘁𝗮̉𝗶 (𝗩𝗜𝗔) 𝘃𝗮̀ 𝗵𝗮̀𝗻𝗴 𝘁𝗿𝘂̛̣𝗰 𝘁𝗶𝗲̂́𝗽 (𝗗𝗶𝗿𝗲𝗰𝘁)
+                            </a>
+
                         </div>
                         <div className="child">
                             <IoIosArrowForward />
-                            𝐋𝐨𝐠𝐢𝐬𝐭𝐢𝐜𝐬 𝐥𝐚̀ 𝐠𝐢̀?
+                            <a href="https://gatewayviet.com.vn/2020/04/30/%f0%9d%90%8b%f0%9d%90%a8%f0%9d%90%a0%f0%9d%90%a2%f0%9d%90%ac%f0%9d%90%ad%f0%9d%90%a2%f0%9d%90%9c%f0%9d%90%ac-%f0%9d%90%a5%f0%9d%90%9a-%f0%9d%90%a0%f0%9d%90%a2/">
+                                𝐋𝐨𝐠𝐢𝐬𝐭𝐢𝐜𝐬 𝐥𝐚̀ 𝐠𝐢̀?
+                            </a>
+
                         </div>
                         <div className="child">
                             <IoIosArrowForward />
-                            𝑫𝒊̣𝒄𝒉 𝒗𝒖̣ 𝒗𝒂̣̂𝒏 𝒄𝒉𝒖𝒚𝒆̂̉𝒏 𝒅𝒐𝒐𝒓 𝒕𝒐 𝒅𝒐𝒐𝒓
+                            <a href="https://gatewayviet.com.vn/2020/04/30/%f0%9d%91%ab%f0%9d%92%8a%cc%a3%f0%9d%92%84%f0%9d%92%89-%f0%9d%92%97%f0%9d%92%96%cc%a3-%f0%9d%92%97%f0%9d%92%82%cc%a3%cc%82%f0%9d%92%8f-%f0%9d%92%84%f0%9d%92%89%f0%9d%92%96%f0%9d%92%9a%f0%9d%92%86/">
+                                𝑫𝒊̣𝒄𝒉 𝒗𝒖̣ 𝒗𝒂̣̂𝒏 𝒄𝒉𝒖𝒚𝒆̂̉𝒏 𝒅𝒐𝒐𝒓 𝒕𝒐 𝒅𝒐𝒐𝒓
+                            </a>
                         </div>
                         <div className="child">
                             <IoIosArrowForward />
-                            Lịch đóng hàng Tháng 4
+                            <a href="https://gatewayviet.com.vn/2020/04/24/lich-dong-hang-thang-4/">
+                                Lịch đóng hàng Tháng 4
+                            </a>
+
                         </div>
                         <div className="child">
                             <IoIosArrowForward />
-                            TIN TUYỂN DỤNG
+                            <a href="https://gatewayviet.com.vn/2020/03/06/tin-tuyen-dung/">
+                                TIN TUYỂN DỤNG
+                            </a>
+
                         </div>
                     </div>
                 </div>

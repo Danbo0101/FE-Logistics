@@ -180,25 +180,35 @@
                 display: flex;
                 flex-direction: column;
                 align-items: start;
+                justify-content: center;
                 gap: 20px;
 
                 .child {
                     svg {
                         font-size: 15px;
+
                     }
 
                     display: flex;
-                    align-items: start;
+                    align-items: center;
                     justify-content: center;
                     gap: 10px;
-                    font-size: 14px;
-                    font-family: sans-serif;
-                    color: rgba($color: #ffffff, $alpha: 0.5);
+
+
                     cursor: pointer;
 
-                    &:hover {
-                        color: #fff;
+                    a {
+                        text-decoration: none;
+                        font-family: sans-serif;
+                        color: rgba($color: #ffffff, $alpha: 0.5);
+                        font-size: 14px;
+
+                        &:hover {
+                            color: #fff;
+                        }
                     }
+
+
 
                 }
             }

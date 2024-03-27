@@ -40,17 +40,17 @@ const Booking = () => {
 
 
 
-    useEffect(() => {
-        fetchListProduct();
-        console.log(listLCL);
-    }, []);
+    // useEffect(() => {
+    //     fetchListProduct();
+    //     console.log(listLCL);
+    // }, []);
 
-    const fetchListProduct = async () => {
+    // const fetchListProduct = async () => {
 
-        let res = await getAllProduct();
-        setListLCL(res);
+    //     let res = await getAllProduct();
+    //     setListLCL(res);
 
-    }
+    // }
 
     console.log(target)
     return (
@@ -78,7 +78,7 @@ const Booking = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {listLCL && listLCL.length > 0 &&
+                            {/* {listLCL && listLCL.length > 0 &&
                                 listLCL.map(
                                     (item, index) => {
                                         return (
@@ -98,7 +98,7 @@ const Booking = () => {
                                                         }
 
                                                         <div className="name">
-                                                            {/* {item.dvvc} */}
+                                                            {item.dvvc}
                                                             Gateway Logistics
                                                         </div>
 
@@ -129,7 +129,7 @@ const Booking = () => {
                                                                 onClick={() => handleBookingLCL()}
                                                             >
                                                                 Lấy booking
-                                                            </button> */}
+                                                            </button> 
                                                             <button
                                                                 ref={ref => target.current[index] = ref}
                                                                 onClick={() => handleShowContact(index)}
@@ -154,7 +154,7 @@ const Booking = () => {
                                                                     )}
                                                                 </Overlay>
                                                             </button>
-                                                            {/* </a> */}
+                                                            {/* </a> 
 
                                                         </div>
                                                     </td>
@@ -163,7 +163,7 @@ const Booking = () => {
                                             </>
                                         )
                                     }
-                                )}
+                                )} */}
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -190,12 +190,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[2] = ref}
                                             onClick={() => handleShowContact(2)}
@@ -250,12 +250,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[3] = ref}
                                             onClick={() => handleShowContact(3)}
@@ -352,17 +352,40 @@ const Booking = () => {
                                 <td>GT sản phẩm</td>
 
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        <button className="contact">
+                                        <button
+                                            ref={ref => target.current[5] = ref}
+                                            onClick={() => handleShowContact(5)}
+                                            className={`contact-${5}`}>
                                             <CiMail />
                                             Liên hệ
+                                            <Overlay target={target.current[5]} show={show[5]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={5} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
                                         </button>
+
+
                                     </div>
                                 </td>
                             </tr>
@@ -390,17 +413,40 @@ const Booking = () => {
                                 </td>
                                 <td>GT sản phẩm</td>
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        <button className="contact">
+                                        <button
+                                            ref={ref => target.current[6] = ref}
+                                            onClick={() => handleShowContact(6)}
+                                            className={`contact-${6}`}>
                                             <CiMail />
                                             Liên hệ
+                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={6} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
                                         </button>
+
+
                                     </div>
                                 </td>
                             </tr>
@@ -434,17 +480,40 @@ const Booking = () => {
                                 </td>
                                 <td>GT sản phẩm</td>
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        <button className="contact">
+                                        <button
+                                            ref={ref => target.current[7] = ref}
+                                            onClick={() => handleShowContact(7)}
+                                            className={`contact-${7}`}>
                                             <CiMail />
                                             Liên hệ
+                                            <Overlay target={target.current[7]} show={show[7]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={7} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
                                         </button>
+
+
                                     </div>
                                 </td>
                             </tr>
@@ -477,17 +546,40 @@ const Booking = () => {
                                 </td>
                                 <td>GT sản phẩm</td>
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        <button className="contact">
+                                        <button
+                                            ref={ref => target.current[8] = ref}
+                                            onClick={() => handleShowContact(8)}
+                                            className={`contact-${8}`}>
                                             <CiMail />
                                             Liên hệ
+                                            <Overlay target={target.current[8]} show={show[8]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={8} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
                                         </button>
+
+
                                     </div>
                                 </td>
                             </tr>
@@ -518,17 +610,40 @@ const Booking = () => {
                                 </td>
                                 <td>GT sản phẩm</td>
                                 <td>
-                                    <div className="button-container">
+                                    <div
+                                        className="button-container">
                                         <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
                                         </button>
-                                        <button className="contact">
+                                        <button
+                                            ref={ref => target.current[9] = ref}
+                                            onClick={() => handleShowContact(9)}
+                                            className={`contact-${9}`}>
                                             <CiMail />
                                             Liên hệ
+                                            <Overlay target={target.current[9]} show={show[9]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={9} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
                                         </button>
+
+
                                     </div>
                                 </td>
                             </tr>

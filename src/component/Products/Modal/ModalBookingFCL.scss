@@ -276,6 +276,66 @@
                     }
                 }
             }
+
+            .contact-for-sale {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid;
+                padding: 5px 29px;
+                gap: 10px;
+
+                .title {
+                    font-weight: 500;
+                }
+
+                .main-content {
+                    display: flex;
+                    gap: 30px;
+
+                    .right-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+
+                        .email-customer,
+                        .name-customer {
+                            display: flex;
+                            flex-direction: column;
+
+
+
+                            input {
+                                width: 40vw;
+                                font-size: 15px;
+                                padding: 5px;
+
+                            }
+                        }
+                    }
+
+                    .phone-number-customer {
+                        display: flex;
+                        flex-direction: column;
+
+
+
+                        input {
+                            width: 26vw;
+                            font-size: 15px;
+                            padding: 5px;
+
+                        }
+                    }
+
+
+                }
+
+
+            }
         }
 
 

@@ -11,13 +11,14 @@ import New from "./component/General/New/New";
 import Contact from "./component/General/Contact";
 import NewDetail from './component/General/New/NewDetail';
 import Login from './component/Auth/Login';
-import User from './component/User/User';
+
 import Register from './component/Auth/Register';
 import ManageProduct from './component/Admin/Sale/ManageProduct';
 import Admin from './component/Admin/Admin';
 import DashBoard from './component/Admin/DashBoard';
 import 'react-toastify/dist/ReactToastify.css';
-import Booking from './component/User/Booking';
+import Booking from './component/Products/Booking';
+import Product from './component/Products/Product';
 
 
 
@@ -53,16 +54,16 @@ const Layout = () => {
                     <Route path="manage-product" element={<ManageProduct />} />
                 </Route>
 
-                <Route path='/user' element={<User />} >
+                <Route path='/product' element={<Product />} >
                     <Route index element={<Booking />} />
-                    <Route path="home-page" element={<HomePage />} />
+                    {/* <Route path="home-page" element={<HomePage />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route path="service" element={<Service />} />
                     <Route path="gallery" element={<Gallery />} />
-                    <Route path="new" element={<New />}>
-                        {/* <Route path="new-detail" element={<NewDetail />} /> */}
-                    </Route>
-                    <Route path="contact" element={<Contact />} />
+                    <Route path="new" element={<New />}>  */}
+                    {/* <Route path="new-detail" element={<NewDetail />} /> */}
+                    {/* </Route>
+                    <Route path="contact" element={<Contact />} /> */}
                 </Route>
                 <Route path="/" element={<App />}>
                     <Route index element={<HomePage />} />

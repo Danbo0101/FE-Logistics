@@ -1,10 +1,10 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import "./ModalBookingFCL.scss";
+import "./ModalBookingLCL.scss";
 import { GoPlus, GoHorizontalRule } from "react-icons/go";
 
 
-const ModalBookingFCL = (props) => {
+const ModalBookingLCL = (props) => {
 
     const { show, setShow } = props;
 
@@ -27,7 +27,7 @@ const ModalBookingFCL = (props) => {
                             Công ty Logistics:
                         </div>
                         <div className='name-company'>
-                            DNLSHIPPING CORPORATION CO.,LTD
+                            TTHQSaiGon
                         </div>
                     </div>
                     <div className='sale-representative'>
@@ -35,7 +35,7 @@ const ModalBookingFCL = (props) => {
                             Đại diện bán hàng:
                         </div>
                         <div className='name-merchandiser'>
-                            Ms. Jenia Jenia_nguyen
+                            Mr. Khắc Võ
                         </div>
                     </div>
                 </div>
@@ -79,16 +79,16 @@ const ModalBookingFCL = (props) => {
                     </div>
                     <div className='container-goods'>
                         <div className='types-container'>
-                            <div className='type-container'>
-                                <label>Loại Container</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>45HQ</option>
-                                    <option value="1">50HQ</option>
-                                </select>
+                            <div className='weight'>
+                                <label>Trọng lượng (KG)</label>
+                                <input
+                                    type='text'
+                                    value="1000"
+                                />
                             </div>
-                            <div className='number-container'>
+                            <div className='number-CBM'>
                                 <div className='title-number'>
-                                    Số lượng container
+                                    Khối lượng (CBM)
                                 </div>
                                 <div className='number'>
                                     <GoHorizontalRule />
@@ -104,10 +104,17 @@ const ModalBookingFCL = (props) => {
                                     125.321.150₫
                                 </div>
                             </div>
-
-                            <div className='add-fee'>
+                            <div className='add-fee-from'>
                                 <div className='title'>
-                                    Phụ phí
+                                    Phụ phí cảng đi
+                                </div>
+                                <div className='price'>
+                                    9.582.650₫
+                                </div>
+                            </div>
+                            <div className='add-fee-to'>
+                                <div className='title'>
+                                    Phụ phí cảng đến
                                 </div>
                                 <div className='price'>
                                     9.582.650₫
@@ -122,9 +129,10 @@ const ModalBookingFCL = (props) => {
                                     134.903.800₫
                                 </div>
                             </div>
-                            <div className='good-weight'>
-                                <div className='title-weight'>
-                                    Trọng lượng hàng (KG)
+
+                            <div className='number-goods'>
+                                <div className='title-number'>
+                                    Số kiện
                                 </div>
                                 <div className='number'>
                                     <GoHorizontalRule />
@@ -132,37 +140,67 @@ const ModalBookingFCL = (props) => {
                                     <GoPlus />
                                 </div>
                             </div>
+                            <div className='packing'>
+                                <label>Đóng hàng</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Pallets</option>
+                                    <option value="1">Cartons</option>
+
+                                </select>
+                            </div>
+
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
-                            <label class="form-check-label">SOC (Container của chủ hàng)</label>
-                        </div>
-                        <div className='charge'>
-                            <div className='total-charge'>
-                                <div className='title'>
-                                    Tổng cước phí
+                    </div>
+                    <div className='quote'>
+                        <div className='quote-main'>
+                            <div className='quote-name'>
+                                Chấp nhận báo giá
+                            </div>
+                            <div className='quote-content'>
+                                <div className='quote-content-child'>
+                                    <div className='quote-content-child-name'>
+                                        Cước vận chuyển
+                                    </div>
+                                    <div className='quote-content-child-price'>
+                                        24.890₫
+                                    </div>
                                 </div>
-                                <div className='number'>
-                                    125.321.150₫
+                                <div className='quote-content-child'>
+                                    <div className='quote-content-child-name'>
+                                        Phụ phí cảng đi
+                                    </div>
+                                    <div className='quote-content-child-price'>
+                                        1.941.420₫
+                                    </div>
+                                </div>
+                                <div className='quote-content-child'>
+                                    <div className='quote-content-child-name'>
+                                        Phụ phí cảng đến
+                                    </div>
+                                    <div className='quote-content-child-price'>
+                                        0₫
+                                    </div>
+                                </div>
+                                <div className='quote-content-child'>
+                                    <div className='quote-content-child-name'>
+                                        Tổng chi phí
+                                    </div>
+                                    <div className='quote-content-child-price'>
+                                        1.966.310₫
+                                    </div>
                                 </div>
                             </div>
-                            <div className='total-charge'>
-                                <div className='title'>
-                                    Tổng phụ phí
-                                </div>
-                                <div className='number'>
-                                    9.582.650₫
-                                </div>
+
+                        </div>
+                        <div className='quote-note'>
+                            <div className='quote-note-name'>
+                                Ghi chú
                             </div>
-                            <div className='total-charge'>
-                                <div className='title'>
-                                    Tổng số tiền
-                                </div>
-                                <div className='number'>
-                                    134.903.800₫
-                                </div>
+                            <div className='quote-note-content'>
+                                Note
                             </div>
                         </div>
+
                     </div>
                     <div className='goods'>
                         <div className='good-type'>
@@ -213,6 +251,38 @@ const ModalBookingFCL = (props) => {
 
                         </div>
                     </div>
+                    <div className='contact-for-sale'>
+                        <div className='title'>
+                            Vui lòng để lại thông tin liên hệ
+                        </div>
+                        <div className='main-content'>
+                            <div className='right-content'>
+                                <div className='name-customer'>
+                                    <label>Tên khách hàng</label>
+                                    <input
+                                        type='text'
+                                        placeholder="Please Enter Your Name ..."
+                                    />
+                                </div>
+                                <div className='email-customer'>
+                                    <label>Email</label>
+                                    <input
+                                        type='email'
+                                        placeholder="Please Enter Your Email ..."
+                                    />
+                                </div>
+                            </div>
+
+                            <div className='phone-number-customer'>
+                                <label>Số điện thoại liên hệ</label>
+                                <input
+                                    type='text'
+                                    placeholder="Please Enter Your Phone Number ..."
+                                />
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </Modal.Body>
             <Modal.Footer>
@@ -230,4 +300,4 @@ const ModalBookingFCL = (props) => {
     )
 }
 
-export default ModalBookingFCL;
+export default ModalBookingLCL;

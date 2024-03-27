@@ -1,3 +1,5 @@
+// Define variables or mixins here if needed
+
 body {
   // overflow: hidden;
   padding: 0;
@@ -9,21 +11,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 1400px) {
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1400px;
 
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1400px !important;
+  // Add other container styles here
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+
+    // Add mobile-specific container styles here
   }
 }
 
-.app-contanier {
-
+.app-container {
   height: calc(100vh - 50px);
   overflow: auto;
 
+  // Add other app-container styles here
+
+  @media (max-width: 767px) {
+    // Add mobile-specific app-container styles here
+  }
 }
+
+// Write the rest of your SCSS code here

@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import "./User.scss"
+import "./Product.scss"
 
 
 
 
-const User = () => {
+const Product = () => {
 
 
 
@@ -25,5 +25,5 @@ const User = () => {
     )
 }
 
-export default User;
+export default Product;
 
