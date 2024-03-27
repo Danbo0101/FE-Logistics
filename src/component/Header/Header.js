@@ -315,12 +315,13 @@ const Header = (props) => {
                                 <img src={logo} />
                             </div>
                             <div className="btn">
-                                <span onClick={() => navigate("/user")}>Home</span>
+                                <span onClick={() => navigate("/")}>Home</span>
                                 <span onClick={() => navigate("/user/about-us")}>About Us</span>
                                 <span onClick={() => navigate("/user/service")}>Service</span>
                                 <span onClick={() => navigate("/user/gallery")}>Gallery</span>
                                 <span onClick={() => navigate("/user/new")}>News</span>
                                 <span onClick={() => navigate("/user/contact")}>Contact</span>
+                                <span onClick={() => navigate("/user")}>Product</span>
                             </div>
                         </div>
                         <div className="sub-title">

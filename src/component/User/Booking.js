@@ -190,12 +190,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[2] = ref}
                                             onClick={() => handleShowContact(2)}
@@ -250,12 +250,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[3] = ref}
                                             onClick={() => handleShowContact(3)}
