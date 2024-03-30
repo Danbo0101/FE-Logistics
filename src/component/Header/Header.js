@@ -237,6 +237,7 @@ const Header = (props) => {
                             <span onClick={() => navigate("/new")}>News</span>
                             <span onClick={() => navigate("/contact")}>Contact</span>
                             <span onClick={() => navigate("/product")}>Product</span>
+                             <span href="adsf.coi">News</span>
                         </div>
                     </div>
                     <div className="title">

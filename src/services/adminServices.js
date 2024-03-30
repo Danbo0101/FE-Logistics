@@ -6,7 +6,7 @@ const getAllProduct = () => {
 
 // const getAllUser = () => {
 //     return axios.get('api/v1/participant/all');
-// }
+// }hook class
 
 export {
     getAllProduct
