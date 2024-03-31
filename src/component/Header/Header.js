@@ -234,10 +234,11 @@ const Header = (props) => {
                             <span onClick={() => navigate("/about-us")}>About Us</span>
                             <span onClick={() => navigate("/service")}>Service</span>
                             <span onClick={() => navigate("/gallery")}>Gallery</span>
-                            <span onClick={() => navigate("/new")}>News</span>
+                            <span onClick={() => window.location.href ="https://news.gatewayviet.com"}>News</span>
                             <span onClick={() => navigate("/contact")}>Contact</span>
                             <span onClick={() => navigate("/product")}>Product</span>
-                             <span href="adsf.coi">News</span>
+
+
                         </div>
                     </div>
                     <div className="title">
