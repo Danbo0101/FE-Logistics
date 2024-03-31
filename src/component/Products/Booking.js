@@ -60,10 +60,10 @@ const Booking = () => {
                     <div className="name">
                         HÀNG LẺ (LCL)
                     </div>
-                    <div className="other-function">
+                  {/*  <div className="other-function">
                         Xem tất cả
-                        <MdKeyboardDoubleArrowRight />
-                    </div>
+                        <MdKeyboardDoubleArrowRight /> 
+                    </div>*/}
                 </div>
                 <div className="table-logistic">
                     <Table bordered hover>
@@ -165,7 +165,10 @@ const Booking = () => {
                                     }
                                 )} */}
 
-/*-------------------------------------------------------------------------------------------*/
+
+
+{/*---------------------------------------------------------------------*/}
+
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -228,7 +231,9 @@ const Booking = () => {
                                 </td>
                             </tr>
 
-/*-------------------------------------------------------------------------------------------*/
+
+
+{/*---------------------------------------------------------------------*/}
 
 
                             <tr>
@@ -303,10 +308,10 @@ const Booking = () => {
                     <div className="name">
                         HÀNG CONTAINER (FCL)
                     </div>
-                    <div className="other-function">
+                     {/*  <div className="other-function">
                         Xem tất cả
-                        <MdKeyboardDoubleArrowRight />
-                    </div>
+                        <MdKeyboardDoubleArrowRight /> 
+                    </div>*/}
                 </div>
                 <div className="table-logistic">
                     <Table bordered hover>

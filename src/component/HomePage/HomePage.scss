@@ -176,14 +176,14 @@
                 border: none;
                 cursor: pointer;
                 color: white;
-                background: aqua;
+                background: rgb(0, 215, 215);
 
                 svg {
                     font-size: 14px;
                 }
 
                 &:hover {
-                    background: rgb(0, 191, 191);
+                    background: rgb(0, 180, 180);
                 }
             }
 

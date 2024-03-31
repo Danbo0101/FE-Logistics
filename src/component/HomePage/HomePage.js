@@ -151,10 +151,55 @@ const HomePage = (props) => {
                         <div className="support-child">
                             <div className="name-position">
                                 <div className="position">
+                                    Airfreight:
+                                </div>
+                                <div className="name">
+                                     Ms Hiep
+                                </div>
+                            </div>
+                            <div className="supporter-contact">
+                                <FaSkype />
+                                Chat
+                            </div>
+                        </div>
+                        <hr />
+                        <div className="support-child">
+                            <div className="name-position">
+                                <div className="position">
+                                    Export:
+                                </div>
+                                <div className="name">
+                                     Ms Sally
+                                </div>
+                            </div>
+                            <div className="supporter-contact">
+                                <FaSkype />
+                                Chat
+                            </div>
+                        </div>
+                        <hr />
+                        <div className="support-child">
+                            <div className="name-position">
+                                <div className="position">
+                                    Import:
+                                </div>
+                                <div className="name">
+                                     Ms Nancy
+                                </div>
+                            </div>
+                            <div className="supporter-contact">
+                                <FaSkype />
+                                Chat
+                            </div>
+                        </div>
+                        <hr />
+                        <div className="support-child">
+                            <div className="name-position">
+                                <div className="position">
                                     Consol :
                                 </div>
                                 <div className="name">
-                                    Ms Lynh
+                                     Ms Sally
                                 </div>
                             </div>
                             <div className="supporter-contact">
@@ -181,10 +226,10 @@ const HomePage = (props) => {
                         <div className="support-child">
                             <div className="name-position">
                                 <div className="position">
-                                    Consol :
+                                    Operation :
                                 </div>
                                 <div className="name">
-                                    Ms Lynh
+                                    Ms Thu
                                 </div>
                             </div>
                             <div className="supporter-contact">
@@ -196,25 +241,10 @@ const HomePage = (props) => {
                         <div className="support-child">
                             <div className="name-position">
                                 <div className="position">
-                                    Consol :
+                                    Overseas :
                                 </div>
                                 <div className="name">
-                                    Ms Lynh
-                                </div>
-                            </div>
-                            <div className="supporter-contact">
-                                <FaSkype />
-                                Chat
-                            </div>
-                        </div>
-                        <hr />
-                        <div className="support-child">
-                            <div className="name-position">
-                                <div className="position">
-                                    Consol :
-                                </div>
-                                <div className="name">
-                                    Ms Lynh
+                                    Ms Hana
                                 </div>
                             </div>
                             <div className="supporter-contact">
