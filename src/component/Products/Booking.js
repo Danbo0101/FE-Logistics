@@ -181,14 +181,14 @@ const Booking = () => {
 
                                 </td>
                                 <td>
-                                    <div className="from">Vung Tau</div>
+                                    <div className="from">Ho Chi Minh</div>
                                     -
-                                    <div className="to">Los Angeles</div>
+                                    <div className="to">Bangkok</div>
                                 </td>
 
-                                <td>Thứ 2</td>
+                                <td>CN / Thứ 2</td>
                                 <td>
-                                    <div className="day"> 18 ngày</div>
+                                    <div className="day"> 2 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
                                 <td>GT sản phẩm</td>
@@ -236,6 +236,8 @@ const Booking = () => {
 {/*---------------------------------------------------------------------*/}
 
 
+{/*---------------------------------------------------------------------*/}
+
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -250,11 +252,12 @@ const Booking = () => {
                                 <td>
                                     <div className="from">Ho Chi Minh</div>
                                     -
-                                    <div className="to">Nhava Sheva</div>
+                                    <div className="to">Jarkata</div>
                                 </td>
-                                <td>Thứ 4</td>
+
+                                <td>Thứ 2</td>
                                 <td>
-                                    <div className="day"> 18 ngày</div>
+                                    <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
                                 <td>GT sản phẩm</td>
@@ -268,15 +271,15 @@ const Booking = () => {
                                             Lấy booking
                                         </button>
                                         <button
-                                            ref={ref => target.current[3] = ref}
-                                            onClick={() => handleShowContact(3)}
-                                            className={`contact-${3}`}>
+                                            ref={ref => target.current[2] = ref}
+                                            onClick={() => handleShowContact(2)}
+                                            className={`contact-${2}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[3]} show={show[3]} placement="right">
+                                            <Overlay target={target.current[2]} show={show[2]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={3} {...props}
+                                                        id={2} {...props}
 
                                                     >
 
@@ -297,6 +300,215 @@ const Booking = () => {
                                 </td>
                             </tr>
 
+
+
+{/*---------------------------------------------------------------------*/}
+
+{/*---------------------------------------------------------------------*/}
+
+                            <tr>
+                                <td className="company-name">
+                                    <img
+                                        src={logo}
+                                        alt="logoLogistic"
+                                    />
+                                    <div className="name">
+                                        Gateway Logistics
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div className="from">Ho Chi Minh</div>
+                                    -
+                                    <div className="to">Semarang</div>
+                                </td>
+
+                                <td>Thứ 2</td>
+                                <td>
+                                    <div className="day"> 9 ngày</div>
+                                    <div className="caries"> Đi thẳng</div>
+                                </td>
+                                <td>GT sản phẩm</td>
+                                <td>
+                                    <div
+                                        className="button-container">
+                                        <button
+                                            className="booking"
+                                            onClick={() => handleBookingLCL()}
+                                        >
+                                            Lấy booking
+                                        </button>
+                                        <button
+                                            ref={ref => target.current[2] = ref}
+                                            onClick={() => handleShowContact(2)}
+                                            className={`contact-${2}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[2]} show={show[2]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={2} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+{/*---------------------------------------------------------------------*/}
+
+{/*---------------------------------------------------------------------*/}
+
+                            <tr>
+                                <td className="company-name">
+                                    <img
+                                        src={logo}
+                                        alt="logoLogistic"
+                                    />
+                                    <div className="name">
+                                        Gateway Logistics
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div className="from">Ho Chi Minh</div>
+                                    -
+                                    <div className="to">Úc</div>
+                                </td>
+
+                                <td>CN / Thứ 2</td>
+                                <td>
+                                    <div className="day"> 20 -25 ngày</div>
+                                    <div className="caries"> Đi thẳng</div>
+                                </td>
+                                <td>GT sản phẩm</td>
+                                <td>
+                                    <div
+                                        className="button-container">
+                                        <button
+                                            className="booking"
+                                            onClick={() => handleBookingLCL()}
+                                        >
+                                            Lấy booking
+                                        </button>
+                                        <button
+                                            ref={ref => target.current[2] = ref}
+                                            onClick={() => handleShowContact(2)}
+                                            className={`contact-${2}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[2]} show={show[2]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={2} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+{/*---------------------------------------------------------------------*/}
+
+
+                     
+{/*---------------------------------------------------------------------*/}
+
+                            <tr>
+                                <td className="company-name">
+                                    <img
+                                        src={logo}
+                                        alt="logoLogistic"
+                                    />
+                                    <div className="name">
+                                        Gateway Logistics
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div className="from">Ho Chi Minh</div>
+                                    -
+                                    <div className="to">Singapore</div>
+                                </td>
+
+                                <td>Thứ 2</td>
+                                <td>
+                                    <div className="day"> 3 - 4 ngày</div>
+                                    <div className="caries"> Đi thẳng</div>
+                                </td>
+                                <td>GT sản phẩm</td>
+                                <td>
+                                    <div
+                                        className="button-container">
+                                        <button
+                                            className="booking"
+                                            onClick={() => handleBookingLCL()}
+                                        >
+                                            Lấy booking
+                                        </button>
+                                        <button
+                                            ref={ref => target.current[2] = ref}
+                                            onClick={() => handleShowContact(2)}
+                                            className={`contact-${2}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[2]} show={show[2]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={2} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+{/*---------------------------------------------------------------------*/}
 
                         </tbody>
                     </Table >
