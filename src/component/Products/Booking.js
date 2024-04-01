@@ -15,7 +15,7 @@ import Button from 'react-bootstrap/Button';
 
 const Booking = () => {
 
-    const linkSkype = "https://join.skype.com/invite/pyKiMVuGd0CO";
+    const linkSkype = "skype:bellasteward_gw102?chat";
     const linkFb = "https://www.facebook.com/profile.php?id=100013753994447&mibextid=LQQJ4d";
 
     const [showModalBookingFCL, setShowModalBookingFCL] = useState(false);
