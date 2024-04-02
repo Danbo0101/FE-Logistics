@@ -174,7 +174,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                                                <a href="skype:bellasteward_gw102?chat">Chat</a>
+                                                                <a styles="  text-decoration: none;" href="skype:bellasteward_gw102?chat">Chat</a>
                             </div>
                         </div>
                         <hr />
@@ -189,7 +189,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                                                <a href="skype:nancygateway?chat">Chat</a>
+                                                                <a styles="  text-decoration: none;" href="skype:nancygateway?chat">Chat</a>
                             </div>
                         </div>
                         <hr />
@@ -204,7 +204,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                                                <a href="skype:bellasteward_gw102?chat">Chat</a>
+                                                                <a styles="  text-decoration: none;" href="skype:bellasteward_gw102?chat">Chat</a>
                             </div>
                         </div>
                         <hr />
@@ -219,7 +219,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                                                <a href="skype:trannhulinh?chat">Chat</a>
+                                                                <a styles="  text-decoration: none;" href="skype:trannhulinh?chat">Chat</a>
                             </div>
                         </div>
                         <hr />
@@ -234,7 +234,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                                                <a href="skype:sophy_gateway?chat">Chat</a>
+                                                                <a styles="  text-decoration: none;" href="skype:sophy_gateway?chat">Chat</a>
                             </div>
                         </div>
                         <hr />
@@ -249,7 +249,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                                                <a href="skype:hanatuyet?chat">Chat</a>
+                                                                <a styles="  text-decoration: none;" href="skype:hanatuyet?chat">Chat</a>
                             </div>
                         </div>
                         <hr />
