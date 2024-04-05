@@ -149,27 +149,6 @@ const Header = (props) => {
 
     // }
 
-    // const handleTitle = () => {
-    //     if (location.pathname === "/user") {
-    //         setTitleUser("HOME PAGE");
-    //     }
-    //     if (location.pathname === "/user/about-us") {
-    //         setTitleUser("ABOUT US");
-    //     }
-    //     if (location.pathname === "/user/service") {
-    //         setTitleUser("SERVICE");
-    //     }
-    //     if (location.pathname === "/user/gallery") {
-    //         setTitleUser("GALLERY");
-    //     }
-    //     if (location.pathname === "/user/new") {
-    //         setTitleUser("NEW");
-    //     }
-    //     if (location.pathname === "/user/contact") {
-    //         setTitleUser("CONTACT");
-    //     }
-
-    // }
 
     return (
         <div className="header-container">
@@ -227,12 +206,12 @@ const Header = (props) => {
                         </div>
                         <div className="btn">
                             <span onClick={() => navigate("/")}>Home</span>
+                            <span onClick={() => navigate("/product")}>Products</span>
                             <span onClick={() => navigate("/about-us")}>About Us</span>
                             <span onClick={() => navigate("/service")}>Service</span>
                             <span onClick={() => navigate("/gallery")}>Gallery</span>
                             <span onClick={() => window.location.href ="https://news.gatewayviet.com"}>News</span>
                             <span onClick={() => navigate("/contact")}>Contact</span>
-                            <span onClick={() => navigate("/product")}>Products</span>
 
 
                         </div>
@@ -286,13 +265,13 @@ const Header = (props) => {
                         </div>
                         <div className="btn">
                             <span onClick={() => navigate("/")}>Home</span>
+                            <span onClick={() => navigate("/product")}>Products</span>
                             <span onClick={() => navigate("/about-us")}>About Us</span>
                             <span onClick={() => navigate("/service")}>Service</span>
                             <span onClick={() => navigate("/gallery")}>Gallery</span>
                             <span onClick={() => window.location.href ="https://news.gatewayviet.com"}>News</span>
                             {/*<span onClick={() => navigate("/new")}>News</span>*/}
                             <span onClick={() => navigate("/contact")}>Contact</span>
-                            <span onClick={() => navigate("/product")}>Products</span>
                         </div>
                     </div>
                     <div className="sub-title">

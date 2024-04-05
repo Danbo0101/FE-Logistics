@@ -38,8 +38,25 @@ const Service = (props) => {
                         QUALITY AND PERFORMANCE AT THE RIGHT PRICE
                     </div>
                     <div className="content">
+
+
+                    <div className="content-child">
+<p>C&ocirc;ng ty Gateway l&agrave; Master Consol chuy&ecirc;n gửi h&agrave;ng đi&nbsp;<a href="https://www.facebook.com/hashtag/%C3%BAc?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">&Uacute;c</a>&nbsp;v&agrave; c&aacute;c cảng&nbsp;<a href="https://www.facebook.com/hashtag/ch%C3%A2u_%C3%A1?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Ch&acirc;u &Aacute;</a>&nbsp;như:&nbsp;<a href="https://www.facebook.com/hashtag/bangkok?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Bangkok</a>,&nbsp;<a href="https://www.facebook.com/hashtag/semarang?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Semarang</a>,&nbsp;<a href="https://www.facebook.com/hashtag/jakarta?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Jakarta</a>,&nbsp;<a href="https://www.facebook.com/hashtag/shanghai?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Shanghai</a>,&nbsp;<a href="https://www.facebook.com/hashtag/singapore?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Singapore</a>,&nbsp;<a href="https://www.facebook.com/hashtag/incheon?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Incheon</a>,&nbsp;<a href="https://www.facebook.com/hashtag/busan?__eep__=6&amp;__cft__%5B0%5D=AZWSiisV6nRcZ07cW44WXRbLW5H6xRZbkJZpwdk3oPf2gPpA7cPueKvrQrW5x9QpKJ8-oSnZ1hoCU-YHTz-Isvg09OxsXOV_o67Fl_d1uZB8dz7saMKzIJR7emkd_QftrvXVom4ZrDthBcPGL4qA-yz6&amp;__tn__=*NK-R" target="_blank">Busan</a>,... bằng đường t&agrave;u biển với c&aacute;c lợi thế:</p>
+
+<p>+ Cước ph&iacute; rẻ.</p>
+
+<p>+ Thời gian chuyển tải nhanh ch&oacute;ng.</p>
+
+<p>+ Vận chuyển được c&aacute;c mặt h&agrave;ng si&ecirc;u trường, si&ecirc;u trọng,...</p>
+
+<p>+ Xuất khẩu h&agrave;ng dệt may, h&agrave;ng thực phẩm, h&agrave;ng thủ c&ocirc;ng mỹ nghệ, h&agrave;ng gỗ &amp; đồ nội thất,...</p>
+
+<p>+ Vận chuyển h&agrave;ng c&aacute; nh&acirc;n như: đồ d&ugrave;ng gia đ&igrave;nh, b&agrave;n ghế đ&atilde; qua sử dụng,...</p>
+                        </div>
+
+
                         <div className="content-child">
-                            Gateway. is one of the world’s leading providers of end-to-end supply chain solutions. We combine intercontinental Air and Ocean Freight with comprehensive Value-Added Logistics Services and Supply Chain Services. The range of Supply Chain Solutions can vary from simple transport or storage up to complex operations.
+                            Gateway is one of the world’s leading providers of end-to-end supply chain solutions. We combine intercontinental Air and Ocean Freight with comprehensive Value-Added Logistics Services and Supply Chain Services. The range of Supply Chain Solutions can vary from simple transport or storage up to complex operations.
                         </div>
                         <div className="content-child">
                             We optimize all activities around information, material and financial flow. We provide globally integrated end-to-end solutions tailored to our customers’ supply chain management needs with a special commitment to industry specific requirements.

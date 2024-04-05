@@ -68,7 +68,7 @@ const HomePage = (props) => {
                         GATEWAY SERVICES
                     </div>
                     <div className="service-main-content">
-                        Globally known for our ability to handle every last detail of our customers’ particular logistics and forwarding needs, Gateway Services team takes care of all your logistics.
+                        Globally known for our ability to handle every last detail of our customers particular logistics and forwarding needs, Gateway Services team takes care of all your logistics.
                     </div>
                 </div>
                 <div className="service-child">

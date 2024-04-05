@@ -191,7 +191,7 @@ const Booking = () => {
                                     <div className="day"> 2 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
+                                <td>Gateway cung cấp dịch vụ vận chuyển hàng hóa đến Bangkok Thailand tiết kiệm và hiệu quả. Hãy liên hệ với chúng tôi để biết thêm thông tin chi tiết và nhận báo giá tốt nhất.</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -260,7 +260,7 @@ const Booking = () => {
                                     <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
+                                <td>Gateway cung cấp dịch vụ vận chuyển hàng hóa đến Jarkata tiết kiệm và hiệu quả. Hãy liên hệ với chúng tôi để biết thêm thông tin chi tiết và nhận báo giá tốt nhất.</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -328,7 +328,7 @@ const Booking = () => {
                                     <div className="day"> 9 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
+                                <td>Gateway cung cấp dịch vụ vận chuyển hàng hóa đến Semarang tiết kiệm và hiệu quả. Hãy liên hệ với chúng tôi để biết thêm thông tin chi tiết và nhận báo giá tốt nhất.</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -396,7 +396,7 @@ const Booking = () => {
                                     <div className="day"> 19 - 20 ngày</div>
                                     <div className="caries"> Đi thẳng / Trung chuyển</div>
                                 </td>
-                                <td>GT sản phẩm</td>
+                                <td> Chúng tôi nhận vận chuyển đén các cảng: Sydney, Melbourne, Brisbane, Adelaide, Fremantle</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -466,7 +466,7 @@ const Booking = () => {
                                     <div className="day"> 3 - 4 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
+                                <td>Gateway nhận vận chuyển đi Singapore và các tuyến đi VIA SIN</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -536,11 +536,6 @@ const Booking = () => {
                                 <th>Loại container</th>
                                 <th>Ngày khởi hành</th>
                                 <th>Thời gian vận chuyển</th>
-                                {/* <th>Phụ phí</th>
-                                    <th>Cước vận chuyển</th>
-                                    <th>Tổng chi phí</th>
-                                    <th>Thời hạn giá</th> */}
-                                <th>Giới thiệu sản phẩm</th>
                                 <th>Booking</th>
                             </tr>
                         </thead>
@@ -567,13 +562,12 @@ const Booking = () => {
                                     -
                                     <div className="to">Jarkata</div>
                                 </td>
-                                <td>40'HQ/20DC</td>
+                                <td>40'HQ/20'DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -636,13 +630,12 @@ const Booking = () => {
                                     -
                                     <div className="to">Bangkok</div>
                                 </td>
-                                <td>40'HQ/20DC</td>
+                                <td>40'HQ/20'DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 2 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -702,12 +695,12 @@ const Booking = () => {
                                     <div className="to">Semarang</div>
                                 </td>
                                 <td>40'HQ/20'DC</td>
+
                                 <td>Thứ 2</td>
                                 <td>
                                     <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -766,13 +759,12 @@ const Booking = () => {
                                     -
                                     <div className="to">Úc</div>
                                 </td>
-                                <td>40'HQ/20DC</td>
+                                <td>40'HQ/20'DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 19 - 20 ngày</div>
                                     <div className="caries"> Đi thẳng / Trung chuyển</div>
                                 </td>
-                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
@@ -831,13 +823,12 @@ const Booking = () => {
                                     -
                                     <div className="to">Singapore</div>
                                 </td>
-                                <td>40'HQ/20DC</td>
+                                <td>40'HQ/20'DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 3 - 4 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
