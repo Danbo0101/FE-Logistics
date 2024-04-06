@@ -1,0 +1,242 @@
+.new-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+
+
+
+    .breadcrumb {
+
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        font-weight: 200;
+        padding: 10px 65px;
+
+        .breadcrumb-item {
+
+            color: black;
+            text-decoration: none !important;
+
+            &.active {
+                color: rgb(0, 26, 255);
+
+            }
+        }
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 50px;
+        width: 100vw;
+
+        .left-container {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+
+
+
+
+            .new-content {
+                display: flex;
+                width: 100%;
+                flex-wrap: nowrap;
+                gap: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: box-shadow 0.3s;
+
+                &:hover {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                }
+
+                .new-image-content {
+                    position: relative;
+                    display: inline-block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .date-new {
+                        position: absolute;
+                        top: 0px;
+                        right: -0px;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: white;
+                        padding: 10px 15px;
+                        font-size: 14px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: aqua;
+                        }
+
+                        .day {
+                            font-weight: bold;
+                        }
+
+                        .month {
+                            text-transform: uppercase;
+                        }
+                    }
+
+
+                }
+
+                .main-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 40px 40px;
+                    gap: 17px;
+
+                    .title {
+                        font-size: 20px;
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+
+                    .category {
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        gap: 10px;
+                        font-size: 14px;
+                        font-family: sans-serif;
+
+                        .name {
+                            color: aqua;
+                            text-decoration: underline;
+                            cursor: pointer;
+
+                        }
+                    }
+
+                    .content {
+                        font-size: 12px;
+                        font-family: monospace;
+                        color: rgba(0, 0, 0, 0.5);
+                        line-height: 1.4;
+                    }
+
+                }
+            }
+
+
+        }
+
+        .right-container {
+            width: 20%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .filter-container {
+                .search-container {
+                    position: relative;
+
+                    .search-input {
+                        // padding-right: 30px;
+                        padding: 15px;
+                        width: 18vw;
+                        border: 1px solid rgba(0, 0, 0, 0.5);
+                        border-radius: 20px;
+                    }
+
+                    .search-icon {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        color: #999;
+                        pointer-events: none;
+                        /* Allows clicking on the input instead of the icon */
+                    }
+                }
+            }
+
+            .category-container {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+                border: 4px solid rgb(0, 204, 255);
+                border-radius: 5px;
+                padding: 70px 50px;
+
+
+                .category-title {
+                    font-size: 27px;
+                    font-family: monospace;
+                    padding-bottom: 20px;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+
+                .category-child {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.5);
+
+
+                    &:hover {
+                        cursor: pointer;
+                        color: aqua;
+                    }
+                }
+
+
+            }
+
+            .recent-post {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                padding: 30px 0;
+                gap: 10px;
+
+
+                .title {
+                    font-size: 27px;
+                    font-family: monospace;
+                    padding: 30px 0;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+
+                .main-recent-post {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: aqua;
+                    }
+
+                    .date {
+                        font-size: 12px;
+                        font-family: sans-serif;
+                        color: rgba(0, 0, 0, 0.5);
+
+                    }
+                }
+            }
+        }
+    }
+}

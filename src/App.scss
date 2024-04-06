@@ -1,7 +1,7 @@
 // Define variables or mixins here if needed
 
 body {
-  // overflow: hidden;
+
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,34 +9,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  max-width: 1400px;
-
-  // Add other container styles here
-
-  @media (max-width: 767px) {
-    max-width: 100%;
-
-    // Add mobile-specific container styles here
-  }
-}
 
 .app-container {
   height: calc(100vh - 50px);
   overflow: auto;
 
-  // Add other app-container styles here
-
-  @media (max-width: 767px) {
-    // Add mobile-specific app-container styles here
-  }
 }
 
-// Write the rest of your SCSS code here
+
+@media only screen and (min-width: 430px) and (max-width: 700px) {
+  .app-container {
+    max-width: 100%;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+}

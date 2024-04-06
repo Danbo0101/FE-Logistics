@@ -1,4 +1,4 @@
-import "./HomePage.scss";
+import "./HomePageMobile.scss";
 import { IoIosSend } from "react-icons/io";
 import { FaArrowRight, FaSkype } from "react-icons/fa";
 import imgService1 from "../../assets/service_1.jpeg";
@@ -11,22 +11,24 @@ import imgBrand3 from "../../assets/brand3.png";
 import imgBrand4 from "../../assets/brand4.png";
 import imgBrand5 from "../../assets/brand5.png";
 import imgBrand6 from "../../assets/brand6.png";
-import videoHomePage from "../../assets/Logistics.mp4";
-import Footer from "../Footer/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import { useRef, useState } from "react";
+import FooterMobile from "../Footer/FooterMoblie";
 
 
-const HomePage = (props) => {
+const HomePageMobile = () => {
 
     const navigate = useNavigate();
 
+
     return (
+
         <div className="homepage-container">
             <div className="about-us">
                 <div className="left-content">
                     <div className="title-content">
+                        <hr className="custom-hr" />
                         ABOUT US
                     </div>
                     <div className="main-content">
@@ -38,80 +40,86 @@ const HomePage = (props) => {
                             onClick={() => {
                                 navigate("about-us")
                             }}
-
                         >
                             <IoIosSend />
                             Read More
                         </button>
                     </div>
                 </div>
-                <div className="right-content">
-                    <video autoPlay muted loop>
-                        <source
-                            src={videoHomePage}
-                            type='video/mp4'
-                        />
-                    </video>
-                </div>
+                {/* <div className="right-content">
+                            <video autoPlay muted loop>
+                                <source
+                                    src={videoHomePage}
+                                    type='video/mp4'
+                                />
+                            </video>
+                        </div> */}
             </div>
             <div className="services">
                 <div className="service-main">
                     <div className="service-main-title">
+                        <hr className="custom-hr" />
                         GATEWAY SERVICES
                     </div>
                     <div className="service-main-content">
                         Globally known for our ability to handle every last detail of our customers’ particular logistics and forwarding needs, Gateway Services team takes care of all your logistics.
                     </div>
                 </div>
-                <div className="service-child">
-                    <img src={imgService1} />
-                    <div className="service-child-title">
-                        Sea Freight – Vận tải đường biển
+                <div className="slide-services">
+                    <div className="service-child">
+                        <img src={imgService1} />
+                        <div className="service-child-title">
+                            Sea Freight – Vận tải đường biển
+                        </div>
+                        <div className="service-child-content">
+                            Gateway Viet Logistics đã ký hợp đồng dịch vụ với nhiều hãng tàu có uy tín như APL, CMA-CGM, OOCL, ZIM, CK LINE, PIL, WAN HAI, YML, MSC, để cung cấp cho khách…
+                        </div>
+                        <div
+                            className="read-more"
+                            onClick={() => {
+                                navigate("service")
+                            }}
+                        >
+                            read more {String.fromCharCode(8594)}
+                        </div>
                     </div>
-                    <div className="service-child-content">
-                        Gateway Viet Logistics đã ký hợp đồng dịch vụ với nhiều hãng tàu có uy tín như APL, CMA-CGM, OOCL, ZIM, CK LINE, PIL, WAN HAI, YML, MSC, để cung cấp cho khách…
+                    <div className="service-child">
+                        <img src={imgService2} />
+                        <div className="service-child-title">
+                            Master Consolidator – Vận tải tối ưu
+                        </div>
+                        <div className="service-child-content">
+                            Từ các lô hàng tải nhỏ hơn container (LCL) đến các giải pháp hợp nhất đa quốc gia, GATEWAY luôn sẵn sàng đáp ứng mọi nhu cầu vận chuyển của bạn.                    </div>
+                        <div
+                            className="read-more"
+                            onClick={() => navigate("service")}
+                        >
+                            read more {String.fromCharCode(8594)}
+                        </div>
                     </div>
-                    <div
-                        className="read-more"
-                        onClick={() => {
-                            navigate("service")
-                        }}
-                    >
-                        read more {String.fromCharCode(8594)}
-                    </div>
-                </div>
-                <div className="service-child">
-                    <img src={imgService2} />
-                    <div className="service-child-title">
-                        Master Consolidator – Vận tải tối ưu
-                    </div>
-                    <div className="service-child-content">
-                        Từ các lô hàng tải nhỏ hơn container (LCL) đến các giải pháp hợp nhất đa quốc gia, GATEWAY luôn sẵn sàng đáp ứng mọi nhu cầu vận chuyển của bạn.                    </div>
-                    <div
-                        className="read-more"
-                        onClick={() => navigate("service")}
-                    >
-                        read more {String.fromCharCode(8594)}
-                    </div>
-                </div>
-                <div className="service-child">
-                    <img src={imgService3} />
-                    <div className="service-child-title">
-                        Air Freight – Vận tải hàng không
-                    </div>
-                    <div className="service-child-content">
-                        Kính gửi quý khách hàng thân yêu,
-                        <br />
+                    <div className="service-child">
+                        <img src={imgService3} />
+                        <div className="service-child-title">
+                            Air Freight – Vận tải hàng không
+                        </div>
+                        <div className="service-child-content">
+                            Kính gửi quý khách hàng thân yêu,
+                            <br />
 
-                        Hiện tại, Gateway Logistics đang phát triển mạnh trong hệ thống vận tải hàng không.
-                    </div>
-                    <div
-                        className="read-more"
-                        onClick={() => navigate("service")}
-                    >
-                        read more {String.fromCharCode(8594)}
+                            Hiện tại, Gateway Logistics đang phát triển mạnh trong hệ thống vận tải hàng không.
+                        </div>
+                        <div
+                            className="read-more"
+                            onClick={() => navigate("service")}
+                        >
+                            read more {String.fromCharCode(8594)}
+                        </div>
                     </div>
                 </div>
+
+
+
+
             </div>
             <div className="contact">
                 <div className="left-content">
@@ -129,13 +137,12 @@ const HomePage = (props) => {
                         </button>
                     </div>
                 </div>
-                <div className="right-content">
-                    <img src={imgOperator} />
-                </div>
+
             </div>
             <div className="supports">
                 <div className="left-content">
                     <div className="title-support">
+                        <hr className="custom-hr" />
                         ONLINE SUPPORT
                     </div>
                     <div className="support">
@@ -151,7 +158,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:luong.hiep1?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -166,7 +173,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:bellasteward_gw102?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -181,7 +188,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:nancygateway?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -196,7 +203,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:bellasteward_gw102?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -211,7 +218,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:trannhulinh?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -226,7 +233,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:sophy_gateway?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -241,7 +248,7 @@ const HomePage = (props) => {
                             </div>
                             <div className="supporter-contact">
                                 <FaSkype />
-                                <a href="skype:hanatuyet?chat">Chat</a>
+                                Chat
                             </div>
                         </div>
                         <hr />
@@ -249,6 +256,7 @@ const HomePage = (props) => {
                 </div>
                 <div className="right-content">
                     <div className="contact-us-title">
+                        <hr className="custom-hr" />
                         CONTACT US
                     </div>
                     <div className="content">
@@ -296,11 +304,10 @@ const HomePage = (props) => {
                 <img src={imgBrand6} />
             </div>
             <div className='footer-contanier'>
-                <Footer />
+                <FooterMobile />
             </div>
-        </div>
-
+        </div >
     )
 }
 
-export default HomePage;
+export default HomePageMobile;

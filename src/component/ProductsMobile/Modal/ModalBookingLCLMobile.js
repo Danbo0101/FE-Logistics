@@ -1,14 +1,18 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import "./ModalBookingFCL.scss";
+import "./ModalBookingLCLMobile.scss";
 import { GoPlus, GoHorizontalRule } from "react-icons/go";
+import { useState } from 'react';
 
 
-const ModalBookingFCL = (props) => {
+const ModalBookingLCLMobile = (props) => {
 
     const { show, setShow } = props;
 
     const handleClose = () => setShow(false);
+
+    const [numberCBM, setNumberCBM] = useState(1);
+    const [numberPack, setNumberPack] = useState(1);
 
     return (
         <Modal
@@ -27,7 +31,7 @@ const ModalBookingFCL = (props) => {
                             Công ty Logistics:
                         </div>
                         <div className='name-company'>
-                            DNLSHIPPING CORPORATION CO.,LTD
+                            TTHQSaiGon
                         </div>
                     </div>
                     <div className='sale-representative'>
@@ -35,7 +39,7 @@ const ModalBookingFCL = (props) => {
                             Đại diện bán hàng:
                         </div>
                         <div className='name-merchandiser'>
-                            Ms. Jenia Jenia_nguyen
+                            Mr. Khắc Võ
                         </div>
                     </div>
                 </div>
@@ -79,91 +83,68 @@ const ModalBookingFCL = (props) => {
                     </div>
                     <div className='container-goods'>
                         <div className='types-container'>
-                            <div className='type-container'>
-                                <label>Loại Container</label>
+                            <div className='weight'>
+                                <label>Trọng lượng (KG)</label>
+                                <input
+                                    type='text'
+                                    value="1000"
+                                />
+                            </div>
+                            <div className='number-CBM'>
+                                <div className='title-number'>
+                                    Khối lượng (CBM)
+                                </div>
+                                <div className='number'>
+                                    <span>
+                                        {numberCBM >= 2 ?
+                                            <GoHorizontalRule
+                                                onClick={() => setNumberCBM(numberCBM - 1)}
+
+                                            />
+                                            :
+                                            <GoHorizontalRule
+                                            />
+
+                                        }
+                                    </span>
+                                    {numberCBM}
+                                    <span>
+                                        <GoPlus onClick={() => setNumberCBM(numberCBM + 1)} />
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div className='number-goods'>
+                                <div className='title-number'>
+                                    Số kiện
+                                </div>
+                                <div className='number'>
+                                    {numberPack >= 2 ?
+                                        <GoHorizontalRule
+                                            onClick={() => setNumberPack(numberPack - 1)}
+
+                                        />
+                                        :
+                                        <GoHorizontalRule
+                                        />
+
+                                    }
+                                    {numberPack}
+                                    <GoPlus onClick={() => setNumberPack(numberPack + 1)} />
+                                </div>
+                            </div>
+                            <div className='packing'>
+                                <label>Đóng hàng</label>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>45HQ</option>
-                                    <option value="1">50HQ</option>
+                                    <option selected>Pallets</option>
+                                    <option value="1">Cartons</option>
+
                                 </select>
                             </div>
-                            <div className='number-container'>
-                                <div className='title-number'>
-                                    Số lượng container
-                                </div>
-                                <div className='number'>
-                                    <GoHorizontalRule />
-                                    1
-                                    <GoPlus />
-                                </div>
-                            </div>
-                            <div className='freight'>
-                                <div className='title'>
-                                    Cước vận chuyển
-                                </div>
-                                <div className='price'>
-                                    125.321.150₫
-                                </div>
-                            </div>
 
-                            <div className='add-fee'>
-                                <div className='title'>
-                                    Phụ phí
-                                </div>
-                                <div className='price'>
-                                    9.582.650₫
-                                </div>
-                            </div>
-
-                            <div className='total-cost'>
-                                <div className='title'>
-                                    Tổng chi phí
-                                </div>
-                                <div className='price'>
-                                    134.903.800₫
-                                </div>
-                            </div>
-                            <div className='good-weight'>
-                                <div className='title-weight'>
-                                    Trọng lượng hàng (KG)
-                                </div>
-                                <div className='number'>
-                                    <GoHorizontalRule />
-                                    1
-                                    <GoPlus />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
-                            <label class="form-check-label">SOC (Container của chủ hàng)</label>
-                        </div>
-                        <div className='charge'>
-                            <div className='total-charge'>
-                                <div className='title'>
-                                    Tổng cước phí
-                                </div>
-                                <div className='number'>
-                                    125.321.150₫
-                                </div>
-                            </div>
-                            <div className='total-charge'>
-                                <div className='title'>
-                                    Tổng phụ phí
-                                </div>
-                                <div className='number'>
-                                    9.582.650₫
-                                </div>
-                            </div>
-                            <div className='total-charge'>
-                                <div className='title'>
-                                    Tổng số tiền
-                                </div>
-                                <div className='number'>
-                                    134.903.800₫
-                                </div>
-                            </div>
                         </div>
                     </div>
+
                     <div className='goods'>
                         <div className='good-type'>
                             <label>Nhóm hàng</label>
@@ -192,13 +173,13 @@ const ModalBookingFCL = (props) => {
                             <div className='from-time'>
                                 <label>Từ ngày</label>
                                 <input
-                                    type='date'
+                                    type='text'
                                 />
                             </div>
                             <div className='to-time'>
                                 <label>Tới ngày</label>
                                 <input
-                                    type='date'
+                                    type='text'
                                 />
                             </div>
                         </div>
@@ -262,4 +243,4 @@ const ModalBookingFCL = (props) => {
     )
 }
 
-export default ModalBookingFCL;
+export default ModalBookingLCLMobile;

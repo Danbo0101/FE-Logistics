@@ -1,0 +1,76 @@
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-share.css');
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+
+    .gallery-contanier {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+
+        .breadcrumb {
+            width: 90vw;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 200;
+            padding: 30px 20px 0 10px;
+
+            .breadcrumb-item {
+
+                color: black;
+                text-decoration: none !important;
+
+                &.active {
+                    color: rgb(0, 26, 255);
+
+                }
+            }
+        }
+
+        .gallery-main {
+            position: relative;
+            display: flex;
+            font-family: sans-serif;
+            padding: 40px 0;
+            width: 100vw;
+            // background-image: linear-gradient(#e8f0ff 0%, white 52.08%);
+            color: #0e3481;
+            min-height: 100vh;
+
+            .masonry-gallery-demo {
+                margin: 0 100px;
+
+
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                .grid-sizer,
+                .lg-item {
+                    width: 20%;
+
+                }
+
+                .lg-item {
+                    float: left;
+                    margin-bottom: 10px;
+                }
+
+                .lg-item img {
+                    display: block;
+                    max-width: 100%;
+                }
+
+                img.img-responsive {
+                    width: 250px;
+                    height: 170px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

@@ -3,23 +3,27 @@ import logo from "../../assets/logo.png";
 import { FaFacebook, FaSkype } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import ModalBookingFCL from "./Modal/ModalBookingFCL";
-import ModalBookingLCL from "./Modal/ModalBookingLCL";
 import { useEffect, useState, useRef } from "react";
 // import { getAllUser } from "../../services/adminServices";
 import { getAllProduct } from "../../services/adminServices";
 import Tooltip from 'react-bootstrap/Tooltip';
 import Overlay from 'react-bootstrap/Overlay';
 import Button from 'react-bootstrap/Button';
+import ModalBookingFCLMobile from './Modal/ModalBookingFCLMobile';
+import ModalBookingLCLMobile from './Modal/ModalBookingLCLMobile';
 
 
-const Booking = () => {
+const BookingMobile = () => {
 
     const linkSkype = "skype:bellasteward_gw102?chat";
-    const linkFb = "https://www.facebook.com/gatewayviet/";
+    const linkFb = "https://www.facebook.com/profile.php?id=100013753994447&mibextid=LQQJ4d";
 
     const [showModalBookingFCL, setShowModalBookingFCL] = useState(false);
     const [showModalBookingLCL, setShowModalBookingLCL] = useState(false);
+    const [logisticsFcl, setLogisticsFcl] = useState({
+        name: " Gateway Logistics",
+        from: "Ho Chi Minh"
+    })
     const target = useRef([]);
     const [listLCL, setListLCL] = useState([]);
     const [show, setShow] = useState(Array(listLCL.length).fill(false));
@@ -60,7 +64,7 @@ const Booking = () => {
                     <div className="name">
                         HÀNG LẺ (LCL)
                     </div>
-                  {/*  <div className="other-function">
+                    {/*  <div className="other-function">
                         Xem tất cả
                         <MdKeyboardDoubleArrowRight /> 
                     </div>*/}
@@ -167,7 +171,7 @@ const Booking = () => {
 
 
 
-{/*---------------------------------------------------------------------*/}
+                            {/*---------------------------------------------------------------------*/}
 
                             <tr>
                                 <td className="company-name">
@@ -176,12 +180,14 @@ const Booking = () => {
                                         alt="logoLogistic"
                                     />
                                     <div className="name">
-                                        Gateway Logistics
+                                        {logisticsFcl.name}
                                     </div>
 
                                 </td>
                                 <td>
+
                                     <div className="from">Ho Chi Minh</div>
+
                                     -
                                     <div className="to">Bangkok</div>
                                 </td>
@@ -191,16 +197,16 @@ const Booking = () => {
                                     <div className="day"> 2 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>Gateway cung cấp dịch vụ vận chuyển hàng hóa đến Bangkok Thailand tiết kiệm và hiệu quả. Hãy liên hệ với chúng tôi để biết thêm thông tin chi tiết và nhận báo giá tốt nhất.</td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[0] = ref}
                                             onClick={() => handleShowContact(0)}
@@ -233,10 +239,10 @@ const Booking = () => {
 
 
 
-{/*---------------------------------------------------------------------*/}
+                            {/*---------------------------------------------------------------------*/}
 
 
-{/*---------------------------------------------------------------------*/}
+                            {/*---------------------------------------------------------------------*/}
 
                             <tr>
                                 <td className="company-name">
@@ -252,6 +258,77 @@ const Booking = () => {
                                 <td>
                                     <div className="from">Ho Chi Minh</div>
                                     -
+
+                                    <div className="to">Bangkok</div>
+                                </td>
+
+                                <td>CN / Thứ 2</td>
+                                <td>
+                                    <div className="day"> 2 ngày</div>
+                                    <div className="caries"> Đi thẳng</div>
+                                </td>
+                                <td>GT sản phẩm</td>
+                                <td>
+                                    <div
+                                        className="button-container">
+                                        <button
+                                            className="booking"
+                                            onClick={() => handleBookingLCL()}
+                                        >
+                                            Lấy booking
+                                        </button>
+                                        <button
+                                            ref={ref => target.current[0] = ref}
+                                            onClick={() => handleShowContact(0)}
+                                            className={`contact-${0}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[0]} show={show[0]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={0} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+                            {/*---------------------------------------------------------------------*/}
+
+
+                            {/*---------------------------------------------------------------------*/}
+
+                            <tr>
+                                <td className="company-name">
+                                    <img
+                                        src={logo}
+                                        alt="logoLogistic"
+                                    />
+                                    <div className="name">
+                                        Gateway Logistics
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div className="from">Ho Chi Minh</div>
+                                    -
+
                                     <div className="to">Jarkata</div>
                                 </td>
 
@@ -260,16 +337,16 @@ const Booking = () => {
                                     <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>Gateway cung cấp dịch vụ vận chuyển hàng hóa đến Jarkata tiết kiệm và hiệu quả. Hãy liên hệ với chúng tôi để biết thêm thông tin chi tiết và nhận báo giá tốt nhất.</td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                                </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[1] = ref}
                                             onClick={() => handleShowContact(1)}
@@ -302,9 +379,11 @@ const Booking = () => {
 
 
 
-{/*---------------------------------------------------------------------*/}
 
-{/*---------------------------------------------------------------------*/}
+                            {/*---------------------------------------------------------------------*/}
+
+                            {/*---------------------------------------------------------------------*/}
+
 
                             <tr>
                                 <td className="company-name">
@@ -328,16 +407,16 @@ const Booking = () => {
                                     <div className="day"> 9 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>Gateway cung cấp dịch vụ vận chuyển hàng hóa đến Semarang tiết kiệm và hiệu quả. Hãy liên hệ với chúng tôi để biết thêm thông tin chi tiết và nhận báo giá tốt nhất.</td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                                </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[2] = ref}
                                             onClick={() => handleShowContact(2)}
@@ -370,9 +449,11 @@ const Booking = () => {
 
 
 
-{/*---------------------------------------------------------------------*/}
+                            {/*---------------------------------------------------------------------*/}
 
-{/*---------------------------------------------------------------------*/}
+
+                            {/*---------------------------------------------------------------------*/}
+
 
                             <tr>
                                 <td className="company-name">
@@ -396,16 +477,16 @@ const Booking = () => {
                                     <div className="day"> 19 - 20 ngày</div>
                                     <div className="caries"> Đi thẳng / Trung chuyển</div>
                                 </td>
-                                <td> Chúng tôi nhận vận chuyển đến các cảng: Sydney, Melbourne, Brisbane, Adelaide, Fremantle</td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[3] = ref}
                                             onClick={() => handleShowContact(3)}
@@ -438,11 +519,13 @@ const Booking = () => {
 
 
 
-{/*---------------------------------------------------------------------*/}
+
+                            {/*---------------------------------------------------------------------*/}
 
 
-                     
-{/*---------------------------------------------------------------------*/}
+
+                            {/*---------------------------------------------------------------------*/}
+
 
                             <tr>
                                 <td className="company-name">
@@ -466,16 +549,16 @@ const Booking = () => {
                                     <div className="day"> 3 - 4 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
-                                <td>Gateway nhận vận chuyển đi Singapore và các tuyến đi VIA SIN</td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/* <button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                                </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[4] = ref}
                                             onClick={() => handleShowContact(4)}
@@ -508,7 +591,9 @@ const Booking = () => {
 
 
 
-{/*---------------------------------------------------------------------*/}
+
+                            {/*---------------------------------------------------------------------*/}
+
 
                         </tbody>
                     </Table >
@@ -520,7 +605,7 @@ const Booking = () => {
                     <div className="name">
                         HÀNG CONTAINER (FCL)
                     </div>
-                     {/*  <div className="other-function">
+                    {/*  <div className="other-function">
                         Xem tất cả
                         <MdKeyboardDoubleArrowRight /> 
                     </div>*/}
@@ -536,6 +621,11 @@ const Booking = () => {
                                 <th>Loại container</th>
                                 <th>Ngày khởi hành</th>
                                 <th>Thời gian vận chuyển</th>
+                                {/* <th>Phụ phí</th>
+                                    <th>Cước vận chuyển</th>
+                                    <th>Tổng chi phí</th>
+                                    <th>Thời hạn giá</th> */}
+                                <th>Giới thiệu sản phẩm</th>
                                 <th>Booking</th>
                             </tr>
                         </thead>
@@ -545,7 +635,9 @@ const Booking = () => {
 
 
 
-{/*-------------------------------------------------------------------------------*/}
+
+                            {/*-------------------------------------------------------------------------------*/}
+
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -562,89 +654,22 @@ const Booking = () => {
                                     -
                                     <div className="to">Jarkata</div>
                                 </td>
-                                <td>40'HQ/20'DC</td>
+                                <td>40'HQ/20DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/*<button
-                                            className="booking"
-                                            onClick={() => handleBookingFCL()}
-                                        >
-                                            Lấy booking
-                                        </button> */}
                                         <button
-                                            ref={ref => target.current[5] = ref}
-                                            onClick={() => handleShowContact(5)}
-                                            className={`contact-${5}`}>
-                                            <CiMail />
-                                            Liên hệ
-                                            <Overlay target={target.current[5]} show={show[5]} placement="right">
-                                                {(props) => (
-                                                    <Tooltip
-                                                        id={5} {...props}
-
-                                                    >
-
-                                                        <a href={linkFb}>
-                                                            <FaFacebook />
-                                                        </a>
-                                                        <a href={linkSkype}>
-                                                            <FaSkype />
-                                                        </a>
-
-                                                    </Tooltip>
-                                                )}
-                                            </Overlay>
-                                        </button>
-
-
-                                    </div>
-                                </td>
-                            </tr>
-
-
-{/*-------------------------------------------------------------------------------*/}
-
-
-
-
-{/*-------------------------------------------------------------------------------*/}
-                            <tr>
-                                <td className="company-name">
-                                    <img
-                                        src={logo}
-                                        alt="logoLogistic"
-                                    />
-                                    <div className="name">
-                                        Gateway Logistics
-                                    </div>
-
-                                </td>
-                                <td>
-                                    <div className="from">Ho Chi Minh</div>
-                                    -
-                                    <div className="to">Bangkok</div>
-                                </td>
-                                <td>40'HQ/20'DC</td>
-                                <td>Thứ 2 / CN</td>
-                                <td>
-                                    <div className="day"> 2 ngày</div>
-                                    <div className="caries"> Đi thẳng</div>
-                                </td>
-                                <td>
-                                    <div
-                                        className="button-container">
-                                        {/*<button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[6] = ref}
                                             onClick={() => handleShowContact(6)}
@@ -676,8 +701,82 @@ const Booking = () => {
                             </tr>
 
 
-{/*-------------------------------------------------------------------------------*/}
-{/*-------------------------------------------------------------------------------*/}
+
+                            {/*-------------------------------------------------------------------------------*/}
+
+
+
+
+
+                            {/*-------------------------------------------------------------------------------*/}
+
+                            <tr>
+                                <td className="company-name">
+                                    <img
+                                        src={logo}
+                                        alt="logoLogistic"
+                                    />
+                                    <div className="name">
+                                        Gateway Logistics
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div className="from">Ho Chi Minh</div>
+                                    -
+                                    <div className="to">Bangkok</div>
+                                </td>
+                                <td>40'HQ/20DC</td>
+                                <td>Thứ 2 / CN</td>
+                                <td>
+                                    <div className="day"> 2 ngày</div>
+                                    <div className="caries"> Đi thẳng</div>
+                                </td>
+                                <td>GT sản phẩm</td>
+                                <td>
+                                    <div
+                                        className="button-container">
+                                        <button
+                                            className="booking"
+                                            onClick={() => handleBookingFCL()}
+                                        >
+                                            Lấy booking
+                                        </button>
+                                        <button
+                                            ref={ref => target.current[6] = ref}
+                                            onClick={() => handleShowContact(6)}
+                                            className={`contact-${6}`}>
+                                            <CiMail />
+                                            Liên hệ
+                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
+                                                {(props) => (
+                                                    <Tooltip
+                                                        id={6} {...props}
+
+                                                    >
+
+                                                        <a href={linkFb}>
+                                                            <FaFacebook />
+                                                        </a>
+                                                        <a href={linkSkype}>
+                                                            <FaSkype />
+                                                        </a>
+
+                                                    </Tooltip>
+                                                )}
+                                            </Overlay>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+                            {/*-------------------------------------------------------------------------------*/}
+                            {/*-------------------------------------------------------------------------------*/}
+
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -695,31 +794,31 @@ const Booking = () => {
                                     <div className="to">Semarang</div>
                                 </td>
                                 <td>40'HQ/20'DC</td>
-
                                 <td>Thứ 2</td>
                                 <td>
                                     <div className="day"> 5 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/*<button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
-                                            ref={ref => target.current[7] = ref}
-                                            onClick={() => handleShowContact(7)}
-                                            className={`contact-${7}`}>
+                                            ref={ref => target.current[6] = ref}
+                                            onClick={() => handleShowContact(6)}
+                                            className={`contact-${6}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[7]} show={show[7]} placement="right">
+                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={7} {...props}
+                                                        id={6} {...props}
 
                                                     >
 
@@ -741,8 +840,10 @@ const Booking = () => {
                             </tr>
 
 
-{/*-------------------------------------------------------------------------------*/}
-{/*-------------------------------------------------------------------------------*/}
+
+                            {/*-------------------------------------------------------------------------------*/}
+                            {/*-------------------------------------------------------------------------------*/}
+
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -759,31 +860,32 @@ const Booking = () => {
                                     -
                                     <div className="to">Úc</div>
                                 </td>
-                                <td>40'HQ/20'DC</td>
+                                <td>40'HQ/20DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 19 - 20 ngày</div>
                                     <div className="caries"> Đi thẳng / Trung chuyển</div>
                                 </td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/*<button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
                                             ref={ref => target.current[6] = ref}
-                                            onClick={() => handleShowContact(8)}
-                                            className={`contact-${8}`}>
+                                            onClick={() => handleShowContact(6)}
+                                            className={`contact-${6}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[8]} show={show[8]} placement="right">
+                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={8} {...props}
+                                                        id={6} {...props}
 
                                                     >
 
@@ -804,9 +906,10 @@ const Booking = () => {
                             </tr>
 
 
-{/*-------------------------------------------------------------------------------*/}
+                            {/*-------------------------------------------------------------------------------*/}
 
-{/*-------------------------------------------------------------------------------*/}
+                            {/*-------------------------------------------------------------------------------*/}
+
                             <tr>
                                 <td className="company-name">
                                     <img
@@ -823,31 +926,32 @@ const Booking = () => {
                                     -
                                     <div className="to">Singapore</div>
                                 </td>
-                                <td>40'HQ/20'DC</td>
+                                <td>40'HQ/20DC</td>
                                 <td>Thứ 2 / CN</td>
                                 <td>
                                     <div className="day"> 3 - 4 ngày</div>
                                     <div className="caries"> Đi thẳng</div>
                                 </td>
+                                <td>GT sản phẩm</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        {/*<button
+                                        <button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button> */}
+                                        </button>
                                         <button
-                                            ref={ref => target.current[9] = ref}
-                                            onClick={() => handleShowContact(9)}
-                                            className={`contact-${9}`}>
+                                            ref={ref => target.current[6] = ref}
+                                            onClick={() => handleShowContact(6)}
+                                            className={`contact-${6}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[9]} show={show[9]} placement="right">
+                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={9} {...props}
+                                                        id={6} {...props}
 
                                                     >
 
@@ -869,21 +973,24 @@ const Booking = () => {
                             </tr>
 
 
-{/*-------------------------------------------------------------------------------*/}
+
+                            {/*-------------------------------------------------------------------------------*/}
 
 
 
-                        </tbody>
+
+                        </tbody >
 
 
-                    </Table>
-                </div>
-            </div>
-            <ModalBookingFCL
+                    </Table >
+                </div >
+            </div >
+            <ModalBookingFCLMobile
                 show={showModalBookingFCL}
                 setShow={setShowModalBookingFCL}
+                logisticsFcl={logisticsFcl}
             />
-            <ModalBookingLCL
+            <ModalBookingLCLMobile
                 show={showModalBookingLCL}
                 setShow={setShowModalBookingLCL}
             />
@@ -891,4 +998,4 @@ const Booking = () => {
     )
 }
 
-export default Booking;
+export default BookingMobile;

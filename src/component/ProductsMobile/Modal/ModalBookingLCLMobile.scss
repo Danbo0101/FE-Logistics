@@ -1,0 +1,422 @@
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        /* Đảm bảo Modal nằm trên cùng */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Màu nền mờ */
+        --bs-modal-width: 1100px;
+    }
+
+    .modal-content {
+        width: 100vw;
+        padding: 20px 10px;
+
+        .modal-header {
+            width: 100%;
+
+            .header-booking {
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                gap: 5px;
+                white-space: nowrap;
+            }
+
+            .name {}
+
+            .company-logistic {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                .name-company {
+                    color: rgb(0, 134, 218);
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            }
+
+            .sale-representative {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                .name-merchandiser {
+                    color: rgb(0, 134, 218);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .modal-body {
+            width: 100%;
+
+            .booking-main {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0px;
+                border: 1px solid rgb(78, 78, 78);
+
+                .from-to {
+
+                    padding: 20px;
+                    padding-bottom: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 100%;
+
+                    .name-from,
+                    .name-to {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+
+
+                        input {
+                            width: 100%;
+                            font-size: 14px;
+                            padding: 5px;
+
+                        }
+                    }
+
+                    .delivery-conditions {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+
+                        select.form-select {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .container-goods {
+                    width: 100vw;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 30px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+
+                    .types-container {
+
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .weight {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 5px;
+                            padding: 0 20px;
+
+                            label {
+                                width: 100%;
+                                display: flex;
+                                justify-content: start;
+                            }
+
+                            input {
+                                width: 100%;
+                                padding: 3px 0;
+                                text-align: center;
+                                background-color: rgb(182, 182, 182);
+                            }
+                        }
+
+                        .number-CBM {
+                            width: 100vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 0 50px;
+                            gap: 5px;
+
+                            .title-number {
+                                width: 100%;
+                                display: flex;
+                                justify-content: start;
+                            }
+
+                            .number {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 30px;
+                                border: 1px solid;
+                                padding: 4px 5px;
+                                border-radius: 5px;
+                            }
+
+                            svg {
+                                cursor: pointer;
+                            }
+
+
+                        }
+
+                        .number-goods {
+                            width: 100vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 0 50px;
+                            gap: 5px;
+
+                            .title-number {
+                                display: flex;
+                                justify-content: start;
+                                width: 100%;
+
+                            }
+
+                            .number {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 30px;
+                                border: 1px solid;
+                                padding: 4px 5px;
+                                border-radius: 5px;
+                            }
+
+                            svg {
+                                cursor: pointer;
+                            }
+
+
+                        }
+
+                        .packing {
+
+                            width: 100vw;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 50px;
+                            gap: 5px;
+                        }
+                    }
+
+
+                }
+
+                .goods {
+                    width: 100vw;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 30px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border: none;
+                    gap: 10px;
+
+                    .good-type {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100vw;
+                        padding: 0 50px;
+                        gap: 5px;
+
+                        select.form-select {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .good-detail {
+                        width: 100vw;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 50px;
+                        gap: 5px;
+
+
+
+                        input {
+                            width: 100%;
+                            font-size: 14px;
+                            padding: 4px;
+
+                        }
+                    }
+
+                    .form-check {
+                        width: 100vw;
+                        padding: 10px 75px;
+                        display: flex;
+                    }
+
+
+
+
+                }
+
+                .notes {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    gap: 26px;
+                    border: none;
+                    padding: 10px 30px;
+                    width: 100vw;
+
+                    .time {
+                        width: 100vw;
+                        padding: 0 25px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: start;
+                        gap: 15px;
+
+
+                        .from-time,
+                        .to-time {
+                            width: 100vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 20px;
+
+
+                            input {
+                                width: 55%;
+                                font-size: 14px;
+                                padding: 5px;
+
+                            }
+                        }
+                    }
+
+                    .note {
+                        width: 100vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+                        flex-direction: column;
+                        padding: 0 25px;
+                        gap: 15px;
+
+                        textarea {
+                            width: 75vw;
+                        }
+                    }
+                }
+
+                .contact-for-sale {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    padding: 10px 30px;
+                    gap: 20px;
+                    width: 100vw;
+
+                    .title {
+                        display: flex;
+                        width: 100%;
+                        padding: 0 25px;
+                        font-weight: 500;
+                    }
+
+                    .main-content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100vw;
+                        gap: 10px;
+
+                        .right-content {
+                            width: 100vw;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 10px;
+
+                            .email-customer,
+                            .name-customer {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 0 50px;
+                                gap: 5px;
+
+                                input {
+                                    width: 100%;
+                                    font-size: 15px;
+                                    padding: 5px;
+
+                                }
+                            }
+                        }
+
+                        .phone-number-customer {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 50px;
+                            gap: 5px;
+
+
+
+                            input {
+                                width: 100%;
+                                font-size: 15px;
+                                padding: 5px;
+
+                            }
+                        }
+
+
+                    }
+
+
+                }
+            }
+
+
+        }
+
+        .modal-footer {
+            width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 50px;
+
+
+        }
+    }
+}

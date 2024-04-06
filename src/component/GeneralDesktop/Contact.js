@@ -3,12 +3,23 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { NavLink } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { FaArrowRight } from "react-icons/fa";
-import imgMapFake from "../../assets/mapfake.png"
+import imgMapFake from "../../assets/mapfake.jpeg"
+import { useState } from "react";
 
 
 
 
 const Contact = (props) => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+
+
+    const handleSubmit = async () => {
+        console.log(name, email, phone, message)
+    }
+
     return (
         <div className="contact-container">
             <div className="main-container">
@@ -42,14 +53,17 @@ const Contact = (props) => {
                                 <div className="left-form">
                                     <textarea
                                         placeholder="Name *"
+                                        onChange={(event) => setName(event.target.value)}
                                         rows={2}
                                     />
                                     <textarea
                                         placeholder="Email *"
+                                        onChange={(event) => setEmail(event.target.value)}
                                         rows={2}
                                     />
                                     <textarea
                                         placeholder="Phone"
+                                        onChange={(event) => setPhone(event.target.value)}
                                         rows={2}
                                     />
 
@@ -58,12 +72,15 @@ const Contact = (props) => {
                                 <div className="right-form">
                                     <textarea
                                         placeholder="Message"
+                                        onChange={(event) => setMessage(event.target.value)}
                                         rows={9}
                                     />
                                 </div>
                             </div>
                             <div className="btn-submit">
-                                <button>
+                                <button
+                                    onClick={() => handleSubmit()}
+                                >
                                     Submit
                                     <FaArrowRight />
                                 </button>

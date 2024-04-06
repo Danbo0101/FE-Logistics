@@ -1,4 +1,4 @@
-import "./Footer.scss";
+import "./FooterMobile.scss";
 import logo from "../../assets/logo.png";
 import { IoIosArrowForward, IoMdPhonePortrait } from "react-icons/io";
 import { MdEmail, MdLocationOn } from "react-icons/md";
@@ -6,13 +6,7 @@ import { FaFax, FaFacebook, FaInstagram, FaGooglePlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 
-
-
-
-
-
-
-const Footer = () => {
+const FooterMobile = () => {
 
     const navigate = useNavigate();
 
@@ -146,16 +140,15 @@ const Footer = () => {
             <div className="footer">
                 <hr />
                 <div className="content">
-                    <div className="copyright">
-                        © 2018. All rights reserved. Designed by Danbo.
-                    </div>
                     <div className="icon">
                         <FaFacebook />
                         <FaInstagram />
                         <FaGooglePlus />
-
-
                     </div>
+                    <div className="copyright">
+                        © 2018. All rights reserved. Designed by Danbo.
+                    </div>
+
                 </div>
 
 
@@ -164,4 +157,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default FooterMobile;

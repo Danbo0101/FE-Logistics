@@ -4,19 +4,21 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import Header from './component/Header/Header';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive';
 import HomePage from './component/HomePage/HomePage';
+import HeaderMobile from './component/Header/HeaderMobile';
 
 
 const App = () => {
 
-  const navigate = useNavigate();
+
   const location = useLocation();
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' });
 
 
   // console.log(location.pathname);
   const [isHomePage, setIsHomePage] = useState(true);
   const [title, setTitle] = useState("")
-
 
   useEffect(() => {
     handleHomePage()
@@ -46,16 +48,28 @@ const App = () => {
       setTitle("CONTACT - LIÊN HỆ VỚI CHÚNG TÔI");
       setIsHomePage(false);
     }
+    if (location.pathname === "/product") {
+      setTitle("PRODUCTS");
+      setIsHomePage(false);
+    }
   }
 
   return (
-    <div className="app-contanier">
-      <div className='header-contanier'>
-        <Header
-          isHomePage={isHomePage}
-          title={title}
-          setTitle={setTitle}
-        />
+    <div className="app-container">
+      <div className='header-container'>
+        {isMobile ?
+          <HeaderMobile
+            isHomePage={isHomePage}
+            title={title}
+            setTitle={setTitle}
+          />
+          :
+          <Header
+            isHomePage={isHomePage}
+            title={title}
+            setTitle={setTitle}
+          />
+        }
       </div>
       <div className='main-container'>
         <PerfectScrollbar>

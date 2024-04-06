@@ -1,0 +1,297 @@
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+
+    .service-container {
+
+        width: 100vw;
+
+        .service-main {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100vw;
+
+
+
+            .breadcrumb {
+                width: 90vw;
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 10px;
+                font-size: 14px;
+                font-weight: 200;
+                padding: 30px 20px 0 10px;
+
+                .breadcrumb-item {
+
+                    color: black;
+                    text-decoration: none !important;
+
+                    &.active {
+                        color: rgb(0, 26, 255);
+
+                    }
+                }
+            }
+
+            .about-service {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 10px 20px;
+                // padding: 30px 130px 100px 130px;
+                // gap: 130px;
+                gap: 50px;
+                justify-content: start;
+                align-items: center;
+
+                .title {
+                    font-size: 35px;
+                    // font-family: monospace;
+                    font-family: none;
+                    color: rgba($color: #000000, $alpha: 0.7);
+
+                    .custom-hr {
+                        border: none;
+                        height: 3px;
+                        width: 100px;
+                        background-color: #0033fe;
+                        margin: 0 0 20px 0;
+                        align-self: start;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .content-child {
+                        font-size: 14px;
+                        line-height: 1.7;
+                        color: rgba($color: #000000, $alpha: 0.5);
+                    }
+                }
+            }
+
+            .form-transport {
+                background: #183650;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                flex-wrap: nowrap;
+                padding: 50px 30px;
+                gap: 70px;
+
+                .transport {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+
+                    img {
+                        width: 30vw;
+                        height: 15vh;
+                    }
+
+                    .title {
+                        font-size: 20px;
+                        font-family: Arial, sans-serif;
+                        font-weight: 700;
+                        padding: 30px 0;
+                    }
+
+                    .content {
+                        text-align: center;
+                        font-size: 15px;
+                        line-height: 1.7;
+                        color: rgba($color: #ffffff, $alpha: 0.8);
+                    }
+
+                }
+            }
+
+            .contact-service {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                gap: 30px;
+                // width: 85vw;
+                padding: 50px 30px;
+                background-color: #34ccff;
+                color: #fff;
+
+                .content {
+                    font-size: 32px;
+                    text-align: center;
+                }
+
+                .btn-contact {
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 15px 50px;
+                        gap: 10px;
+                        border-radius: 20px;
+                        border: 1px solid #fff;
+
+                        cursor: pointer;
+                        color: #fff;
+                        background-color: rgba($color: #34ccff, $alpha: 0);
+
+                        svg {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            background: rgb(0, 191, 191);
+                        }
+                    }
+
+                }
+            }
+
+            .effective {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+                padding: 50px 30px;
+                gap: 50px;
+
+                .main {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    padding: 0;
+                    gap: 30px;
+
+                    .title {
+                        font-size: 32px;
+                        font-weight: 300;
+                        font-family: Arial, sans-serif;
+
+                        .custom-hr {
+                            border: none;
+                            height: 3px;
+                            width: 100px;
+                            background-color: #0033fe;
+                            margin: 0 0 20px 0;
+                            align-self: start;
+                        }
+                    }
+
+                    .content {
+                        font-size: 14px;
+                        line-height: 1.7;
+                        color: rgba($color: #000000, $alpha: 0.7);
+                    }
+                }
+
+            }
+
+            .term-service {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: #fff;
+
+                .safe-secure {
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 80px 0;
+                    background-color: #34ccff;
+
+                    svg {
+                        width: 100px;
+                        height: 67px;
+                    }
+
+                    .title {
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    .content {
+                        padding: 0 40px;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                }
+
+                .delivery {
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 80px 0;
+                    background-color: rgb(28, 173, 222);
+
+                    svg {
+                        width: 73px;
+                        height: 67px;
+                    }
+
+                    .title {
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    .content {
+                        padding: 0 40px;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+
+                }
+
+                .support {
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 80px 0;
+                    background-color: rgb(25, 157, 201);
+
+                    svg {
+                        width: 73px;
+                        height: 67px;
+                    }
+
+                    .title {
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    .content {
+                        padding: 0 40px;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
