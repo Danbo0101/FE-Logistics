@@ -16,7 +16,7 @@ import Button from 'react-bootstrap/Button';
 const Booking = () => {
 
     const linkSkype = "skype:bellasteward_gw102?chat";
-    const linkFb = "https://www.facebook.com/profile.php?id=100013753994447&mibextid=LQQJ4d";
+    const linkFb = "https://www.facebook.com/gatewayviet/";
 
     const [showModalBookingFCL, setShowModalBookingFCL] = useState(false);
     const [showModalBookingLCL, setShowModalBookingLCL] = useState(false);
@@ -195,12 +195,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[0] = ref}
                                             onClick={() => handleShowContact(0)}
@@ -264,12 +264,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                                </button> */}
                                         <button
                                             ref={ref => target.current[1] = ref}
                                             onClick={() => handleShowContact(1)}
@@ -332,12 +332,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                                </button> */}
                                         <button
                                             ref={ref => target.current[2] = ref}
                                             onClick={() => handleShowContact(2)}
@@ -396,16 +396,16 @@ const Booking = () => {
                                     <div className="day"> 19 - 20 ngày</div>
                                     <div className="caries"> Đi thẳng / Trung chuyển</div>
                                 </td>
-                                <td> Chúng tôi nhận vận chuyển đén các cảng: Sydney, Melbourne, Brisbane, Adelaide, Fremantle</td>
+                                <td> Chúng tôi nhận vận chuyển đến các cảng: Sydney, Melbourne, Brisbane, Adelaide, Fremantle</td>
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[3] = ref}
                                             onClick={() => handleShowContact(3)}
@@ -470,12 +470,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/* <button
                                             className="booking"
                                             onClick={() => handleBookingLCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                                </button> */}
                                         <button
                                             ref={ref => target.current[4] = ref}
                                             onClick={() => handleShowContact(4)}
@@ -571,12 +571,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/*<button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[6] = ref}
                                             onClick={() => handleShowContact(6)}
@@ -639,12 +639,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/*<button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[6] = ref}
                                             onClick={() => handleShowContact(6)}
@@ -704,12 +704,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/*<button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[6] = ref}
                                             onClick={() => handleShowContact(6)}
@@ -768,12 +768,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/*<button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[6] = ref}
                                             onClick={() => handleShowContact(6)}
@@ -832,12 +832,12 @@ const Booking = () => {
                                 <td>
                                     <div
                                         className="button-container">
-                                        <button
+                                        {/*<button
                                             className="booking"
                                             onClick={() => handleBookingFCL()}
                                         >
                                             Lấy booking
-                                        </button>
+                                        </button> */}
                                         <button
                                             ref={ref => target.current[6] = ref}
                                             onClick={() => handleShowContact(6)}
