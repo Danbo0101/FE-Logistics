@@ -578,15 +578,15 @@ const Booking = () => {
                                             Lấy booking
                                         </button> */}
                                         <button
-                                            ref={ref => target.current[6] = ref}
-                                            onClick={() => handleShowContact(6)}
-                                            className={`contact-${6}`}>
+                                            ref={ref => target.current[5] = ref}
+                                            onClick={() => handleShowContact(5)}
+                                            className={`contact-${5}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
+                                            <Overlay target={target.current[5]} show={show[5]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={6} {...props}
+                                                        id={5} {...props}
 
                                                     >
 
@@ -711,15 +711,15 @@ const Booking = () => {
                                             Lấy booking
                                         </button> */}
                                         <button
-                                            ref={ref => target.current[6] = ref}
-                                            onClick={() => handleShowContact(6)}
-                                            className={`contact-${6}`}>
+                                            ref={ref => target.current[7] = ref}
+                                            onClick={() => handleShowContact(7)}
+                                            className={`contact-${7}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
+                                            <Overlay target={target.current[7]} show={show[7]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={6} {...props}
+                                                        id={7} {...props}
 
                                                     >
 
@@ -776,14 +776,14 @@ const Booking = () => {
                                         </button> */}
                                         <button
                                             ref={ref => target.current[6] = ref}
-                                            onClick={() => handleShowContact(6)}
-                                            className={`contact-${6}`}>
+                                            onClick={() => handleShowContact(8)}
+                                            className={`contact-${8}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
+                                            <Overlay target={target.current[8]} show={show[8]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={6} {...props}
+                                                        id={8} {...props}
 
                                                     >
 
@@ -839,15 +839,15 @@ const Booking = () => {
                                             Lấy booking
                                         </button> */}
                                         <button
-                                            ref={ref => target.current[6] = ref}
-                                            onClick={() => handleShowContact(6)}
-                                            className={`contact-${6}`}>
+                                            ref={ref => target.current[9] = ref}
+                                            onClick={() => handleShowContact(9)}
+                                            className={`contact-${9}`}>
                                             <CiMail />
                                             Liên hệ
-                                            <Overlay target={target.current[6]} show={show[6]} placement="right">
+                                            <Overlay target={target.current[9]} show={show[9]} placement="right">
                                                 {(props) => (
                                                     <Tooltip
-                                                        id={6} {...props}
+                                                        id={9} {...props}
 
                                                     >
 
