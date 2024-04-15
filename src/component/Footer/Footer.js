@@ -5,13 +5,6 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 import { FaFax, FaFacebook, FaInstagram, FaGooglePlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-
-
-
-
-
-
-
 const Footer = () => {
 
     const navigate = useNavigate();
@@ -147,14 +140,10 @@ const Footer = () => {
                 <hr />
                 <div className="content">
                     <div className="copyright">
-                        © 2018. All rights reserved. Designed by Danbo.
+                        © 2018. All rights reserved. Designed by Gateway Logistic Viet Nam.
                     </div>
                     <div className="icon">
-                        <FaFacebook />
-                        <FaInstagram />
-                        <FaGooglePlus />
-
-
+                        <span onClick={() => window.location.href ="https://facebook.com/gatewayviet"}><FaFacebook /></span>
                     </div>
                 </div>
 
